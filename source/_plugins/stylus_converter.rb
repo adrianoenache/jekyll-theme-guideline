@@ -1,19 +1,13 @@
-# A Jekyll plugin to convert .styl to .css
-# This plugin requires the stylus gem, do:
-# $ [sudo] gem install stylus
+# Original source
+# https://gist.github.com/adamjspooner/988201
 
-# See _config.yml above for configuration options.
-
-# Caveats:
-# 1. Files intended for conversion must have empty YAML front matter a the top.
-#    See all.styl above.
-# 2. You can not @import .styl files intended to be converted.
-#    See all.styl and individual.styl above.
+# My fork
+# https://gist.github.com/adrianoenache/fb647880a733bb50e0a8417881db711b
 
 module Jekyll
   class StylusConverter < Converter
     safe true
-    
+
     def setup
       return if @setup
       require 'stylus'
@@ -26,23 +20,19 @@ module Jekyll
       STDERR.puts '  $ [sudo] gem install stylus'
       raise FatalException.new('Missing dependency: stylus')
     end
-    
+
     def matches(ext)
       ext =~ /styl/i
     end
-    
+
     def output_ext(ext)
       '.css'
     end
-    
+
     def convert(content)
       begin
         setup
-        if @config['stylus']['include_css']
-          Stylus.compile content, { 'include css' => true }
-        else
-          Stylus.compile content
-        end
+        Stylus.compile content
       rescue => e
         puts "Stylus Exception: #{e.message}"
       end
