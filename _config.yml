@@ -1,0 +1,79 @@
+# Where things are
+destination:  ./_site
+
+source:       ./source/
+data_dir:     ./source/_data
+drafts_dir:   ./source/_drafts
+includes_dir: ./source/_includes
+layouts_dir:  ./source/_layouts
+plugins_dir:  ./source/_plugins
+
+collections:
+  posts:
+    output:   true
+
+# Handling Reading
+safe:                 false
+include:              [".htaccess"]
+exclude:              ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+keep_files:           [".git"]
+encoding:             "utf-8"
+markdown_ext:         "markdown,mkdown,mkdn,mkd,md"
+strict_front_matter:  false
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false
+
+# Plugins
+whitelist: []
+plugins:   []
+
+# Conversion
+markdown:           kramdown
+highlighter:        rouge
+lsi:                false
+excerpt_separator:  "\n\n"
+incremental:        false
+
+# Serving
+detach:           false
+port:             4000
+host:             127.0.0.1
+baseurl:          "" # does not include hostname
+show_dir_listing: false
+
+# Outputting
+permalink:     date
+paginate_path: /page:num
+timezone:      null
+
+quiet:    false
+verbose:  false
+defaults: []
+
+stylus:
+  compress: true
+  path: ./assets/css
+  include_css: true
+
+liquid:
+  error_mode: warn
+
+# Markdown Processors
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids:       true
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
