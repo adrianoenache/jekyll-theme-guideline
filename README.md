@@ -20,11 +20,11 @@ theme: jekyll-theme-guideline
 
 And then execute:
 
-    $ bundle
+	$ bundle
 
 Or install it yourself as:
 
-    $ gem install jekyll-theme-guideline
+	$ gem install jekyll-theme-guideline
 
 ## Usage
 
@@ -45,4 +45,3 @@ When your theme is released, only the files in `_layouts`, `_includes`, and `_sa
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-

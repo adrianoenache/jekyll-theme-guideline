@@ -4,7 +4,7 @@ destination:  ./_site
 source:       ./source/
 data_dir:     ./source/_data
 drafts_dir:   ./source/_drafts
-includes_dir: ./source/_includes
+includes_dir: ./_includes
 layouts_dir:  ./source/_layouts
 plugins_dir:  ./source/_plugins
 
@@ -39,7 +39,7 @@ incremental:        false
 
 # Serving
 detach:           false
-port:             4000
+port:             8080
 host:             127.0.0.1
 baseurl:          "" # does not include hostname
 show_dir_listing: false
