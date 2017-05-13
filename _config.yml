@@ -15,7 +15,7 @@ collections:
 # Handling Reading
 safe:                 false
 include:              [".htaccess"]
-exclude:              ["assets/css/stylus/README.md", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+exclude:              ["*/README.md", "assets/libs/", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
 keep_files:           [".git"]
 encoding:             "utf-8"
 markdown_ext:         "markdown,mkdown,mkdn,mkd,md"
