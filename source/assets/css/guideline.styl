@@ -1,0 +1,985 @@
+---
+---
+// See individual.styl below. Notice it has no YAML front matter.
+// Cores
+$gl-color-base-1 = #fff
+$gl-color-base-2 = #000
+$gl-color-base-3 = #0aa
+$gl-color-alert = #fa0
+$gl-color-error = #c00
+$gl-color-success = #080
+$gl-color-gray-1 = #444
+$gl-color-gray-2 = #555
+$gl-color-gray-3 = #666
+$gl-color-gray-4 = #888
+$gl-color-gray-5 = #ccc
+$gl-color-gray-6 = #eee
+$gl-color-overlay = rgba($gl-color-base-2, .6)
+$gl-gradient = linear-gradient(to right, $gl-color-gray-1 0%, $gl-color-gray-4 101%)
+$gl-bg-stage-color = $gl-color-gray-5
+$gl-bg-stage = linear-gradient(45deg, $gl-bg-stage-color 25%, transparent 25%, transparent 75%, $gl-bg-stage-color 75%, $gl-bg-stage-color), linear-gradient(45deg, $gl-bg-stage-color 25%, transparent 25%, transparent 75%, $gl-bg-stage-color 75%, $gl-bg-stage-color)
+// Code format
+$gl-code-background = black
+$gl-code-color-default = white
+$gl-code-type-tag-background = white
+$gl-code-type-tag-color = black
+$gl-code-tab-color = gray
+$gl-code-tab-gap-color = $gl-code-background
+//
+$gl-code-html-color-1 = crimson
+$gl-code-html-color-2 = goldenrod
+$gl-code-html-color-3 = yellow
+$gl-code-html-color-4 = lawngreen
+//
+$gl-code-js-color-1 = gold
+$gl-code-js-color-2 = lawngreen
+$gl-code-js-color-3 = deepskyblue
+$gl-code-js-color-4 = plum
+$gl-code-js-color-5 = gray
+$gl-code-js-color-6 = aqua
+//
+$gl-code-css-color-1 = aqua
+$gl-code-css-color-2 = plum
+$gl-code-css-color-3 = khaki
+$gl-code-css-color-4 = chartreuse
+$gl-code-css-color-5 = aquamarine
+$gl-code-css-color-6 = gold
+// Units
+$gl-layout-element = $gl-color-base-2
+$gl-default-font = monospace
+$gl-default-font-size = 12px
+$gl-default-font-height = 16px
+$gl-default-font-color = $gl-color-gray-4
+$gl-h1 = 32px
+$gl-h2 = 24px
+$gl-h3 = 16px
+$gl-title-font = Times New Roman
+$gl-title-height = $gl-h1 + 16px;
+$gl-title-color = $gl-color-base-2
+$gl-border-config = 1px solid $gl-layout-element
+$gl-border-config-10 = 10px solid $gl-layout-element
+$gl-a = $gl-color-base-2
+$gl-a-hover = $gl-color-gray-3
+$gl-a-visited = $gl-a
+$gl-base-radius = 5px
+//
+$font-icons = "icons"
+//
+$gutter = 14px
+$column = 50px
+//
+$columns($qtd-column)
+	$size = ($column + $gutter) * $qtd-column
+//
+$columns-p($qtd-column)
+	$size = 100% / $qtd-column
+//
+$gutters($qtd-gutter)
+	$size = $gutter * $qtd-gutter
+//
+$smart = $columns(5)
+$tablet = $columns(10)
+$notebook = $columns(15)
+$desktop = $columns(20)
+//
+$smart = $columns(5)
+$smart-to-tablet = $columns(10) - 1px
+$tablet = $columns(10)
+$tablet-to-notebook = $columns(15) - 1px
+$notebook = $columns(15)
+$notebook-to-desktop = $columns(20) - 1px
+$desktop = $columns(20)
+$desktop-to-desktop-large = $columns(25) - 1px
+$desktop-large = $columns(25)
+$desktop-large-to-full-hd = $columns(30) - 1px
+$full-hd = $columns(30)
+
+// @media (min-width: $smart)
+// @media (max-width: $smart-to-tablet)
+// @media (max-width: $smart-to-tablet), (min-width: $smart)
+// @media (min-width: $tablet)
+// @media (max-width: $tablet-to-notebook)
+// @media (max-width: $tablet-to-notebook), (min-width: $tablet)
+// @media (min-width: $notebook)
+// @media (max-width: $notebook-to-desktop)
+// @media (max-width: $notebook-to-desktop), (min-width: $notebook)
+// @media (min-width: $desktop)
+// @media (min-width: $desktop-to-desktop-large)
+// @media (min-width: $desktop-to-desktop-large), (min-width: $desktop)
+// @media (min-width: $desktop-large)
+// @media (min-width: $desktop-large-to-full-hd)
+// @media (min-width: $desktop-large-to-full-hd), (min-width: $desktop-large)
+// @media (min-width: $full-hd)
+
+// #########################
+
+body
+	background $gl-color-gray-6
+
+h1.gl, h2.gl, h3.gl
+	margin 1em 0
+
+
+h1.gl
+	border-bottom $gl-border-config
+	font-size $gl-h1
+	line-height $gl-h1
+	padding 0 0 .5em
+
+h2.gl
+	font-size $gl-h2
+	line-height $gl-h2
+
+h3.gl
+	font-size $gl-h3
+	line-height $gl-h3
+
+p.gl
+	border-left $gl-border-config-10
+	font-size 1rem
+	line-height 1.5rem
+	margin .5rem 0
+	padding .5rem
+
+:root
+	font-family $gl-default-font
+	font-size $gl-default-font-size
+	line-height: $gl-default-font-height
+	color $gl-default-font-color
+	padding $gutters(3) $gutters(1) $gutters(1)
+	transition padding .2s ease
+
+	&.gl-nav-active
+		padding $gutters(3) $gutters(1) $gutters(1) (200px + $gutters(1))
+
+		.gl-menu
+			background $gl-color-base-1
+			color $gl-color-base-2
+			left 200px + $gutters(1)
+
+			&:hover
+				background $gl-color-base-2
+				color $gl-color-base-1
+
+		.gl-nav
+			left 0
+
+// #########################
+
+.gl-colors, .gl-typography, .gl-typography-icons, .gl-gs-example, .gl-nav
+	font-size 0
+
+.gl-colors > span, .gl-typography > span, .gl-typography-icons > span, .gl-example > .menu-item, .gl-example:before, .gl-comment, .gl-link, .gl-menu, .gl
+	font-family $gl-default-font
+
+.gl-colors > span, .gl-typography > span, .gl-typography-icons > span, .gl-example:before, .gl-comment, .gl-example > .menu, .gl-example > .menu-item, .gl-link, .gl-menu
+	font-size 1rem
+
+.gl-wrapper
+	display none
+	margin 0 0 10px
+
+	&.active
+		display block
+
+.gl-menu, .gl-link
+	background $gl-color-base-2
+	border 0
+	color $gl-color-base-1
+	line-height 2rem
+	outline none
+
+	&:hover
+		background $gl-color-base-1
+		color $gl-color-base-2
+
+// #########################
+
+.gl-menu
+	border solid 1px $gl-color-base-2
+	position fixed
+	left $gutters(1)
+	top 0
+	transition background .3s ease, color .3s ease, left .2s ease
+	z-index 9999
+
+// #########################
+
+.gl-nav
+	background-color $gl-color-gray-6
+	background-image $gl-bg-stage
+	background-size 10px 10px
+	background-position 0 0, 5px 5px
+	bottom 0
+	left -200px
+	overflow-y auto
+	position fixed
+	top 0
+	transition left .2s ease
+	width 200px
+
+	.gl-link
+		display block
+		text-align left
+		transition background .3s ease, color .3s ease
+		width 100%
+
+		span
+			display block
+
+			&:before
+				background $gl-color-base-1
+				border solid 1px $gl-color-base-2
+				border-radius 50%
+				content ""
+				display inline-block
+				height 7px
+				margin 0 8px 0 0
+				vertical-aling middle
+				transition background .2s ease
+				width 7px
+
+		&.active
+
+			span
+
+				&:before
+					background $gl-color-success
+
+				&:hover
+
+					&:before
+						border-color $gl-color-base-1
+
+// #########################
+
+.gl-comment
+	background $gl-color-base-1
+	border-top $gl-border-config
+	line-height 1.5rem
+	margin 0
+	padding .5rem
+	position relative
+	z-index 1
+
+// #########################
+
+.gl-code-inline
+	display: inline-block
+	vertical-align middle
+		
+	.gl-code-format
+		display: inline-block
+		padding: .25em .5em .25em .25em
+
+		&:before
+			margin 0 .5em 0 0
+
+.gl-code
+
+	&.gl-full
+
+		.gl-code-format
+			display block
+			line-height 1.25em
+			padding: $gutters(2) $gutters(1) $gutters(1)
+
+			&:before
+				left 0
+				position absolute
+				top 0
+
+.gl-code, .gl-code-inline
+	position relative
+	z-index 1
+
+	.gl-code-format
+		background: $gl-code-background
+		color: $gl-code-color-default
+		margin 0
+		overflow auto
+		position relative
+
+		&:before
+			background $gl-code-type-tag-background
+			color $gl-code-type-tag-color
+			content attr(data-gl)
+			font-weight 700
+			line-height 1em
+			padding: .25em .5em
+			text-transform uppercase
+
+		+ .gl-code-format
+			border-top solid 1px
+
+	hr
+		border 0
+		border-top solid 1px
+		border-right solid 5px $gl-code-tab-gap-color
+		box-sizing border-box
+		color $gl-code-tab-color
+		display inline-block
+		vertical-align middle
+		width $gutters(1)
+
+	b
+		font-weight 400
+
+	i, var
+		font-style normal
+
+	q
+		&:before, &:after
+			display none
+	s
+		text-decoration none
+
+	.gl-code-html
+
+		b
+			color $gl-code-html-color-1
+
+		i
+			color $gl-code-html-color-2
+
+		var
+			color $gl-code-html-color-3
+
+		samp
+			color $gl-code-html-color-4
+
+	.gl-code-js
+
+		b
+			color $gl-code-js-color-1
+
+		i
+			color $gl-code-js-color-2
+
+		q
+			color $gl-code-js-color-3
+
+		s
+			color $gl-code-js-color-4
+
+		samp
+			color $gl-code-js-color-5
+
+		var
+			color $gl-code-js-color-6
+
+	.gl-code-css
+
+		b
+			color $gl-code-css-color-1
+
+		i
+			color $gl-code-css-color-2
+
+		q
+			color $gl-code-css-color-3
+
+		s
+			color $gl-code-css-color-4
+
+		samp
+			color $gl-code-css-color-5
+
+		var
+			color $gl-code-css-color-6
+
+// #########################
+
+.gl-example
+	border solid 1px $gl-color-base-2
+	margin 40px -1px 20px
+	position relative
+
+	&:before
+		content attr(data-gl)
+		display block
+		left 30px
+		position absolute
+		top -20px
+
+	&.gl-exemple-full
+		border-left 0
+		border-right 0
+		margin 40px -14px 20px
+
+	&.gl-typography
+		border 0
+
+	&.menu-active
+
+		.gl-example-controls
+				background $gl-color-base-2
+				border-bottom solid 1px $gl-color-base-2
+
+			.menu
+				background $gl-color-base-1
+				color $gl-color-base-2
+
+				&:before
+					content "-"
+
+				&:hover
+					background $gl-color-base-2
+					color $gl-color-base-1
+
+			.menu-item
+
+				&.background, &.comment, &.code, &.grid
+					display inline-block
+
+	&.gl-stage
+		background-color $gl-color-gray-6
+		background-image $gl-bg-stage
+		background-size 10px 10px
+		background-position 0 0, 5px 5px
+
+		.gl-example-controls
+
+			.background
+				background $gl-color-base-1
+				color $gl-color-base-2
+
+				&:hover
+					background $gl-color-base-2
+					color $gl-color-base-1
+
+	&.comment-active
+
+		.gl-example-controls
+
+			.comment
+				background $gl-color-base-1
+				color $gl-color-base-2
+
+				&:hover
+					background $gl-color-base-2
+					color $gl-color-base-1
+
+		.gl-comment
+			display block
+
+	.gl-comment
+		display none
+
+	&.code-active
+
+		.gl-example-controls
+
+			.code
+				background $gl-color-base-1
+				color $gl-color-base-2
+
+				&:hover
+					background $gl-color-base-2
+					color $gl-color-base-1
+
+		.gl-code
+			display block
+
+	.gl-code
+		display none
+
+	&.gl-grid
+
+		&:after
+			background-image linear-gradient(90deg, rgba(255, 0, 0, .10) $column, transparent $gutters(1))
+			background-size $columns(1) $gutters(1)
+			bottom 0
+			content ""
+			display block
+			left 0
+			position absolute
+			right 0
+			top 0
+			z-index 0
+
+		.gl-example-controls
+
+			.grid
+				background $gl-color-base-1
+				color $gl-color-base-2
+
+				&:hover
+					background $gl-color-base-2
+					color $gl-color-base-1
+
+// #########################
+
+.gl-example-controls
+	font-size 0
+	position relative
+	z-index 1
+
+	> .menu, > .menu-item
+		background $gl-color-base-2
+		color $gl-color-base-1
+		cursor pointer
+		display inline-block
+		font-size 1rem
+		transition background .3s ease, color .3s ease
+
+		&:hover
+			background $gl-color-base-1
+			color $gl-color-base-2
+
+	> .menu
+		border solid 1px $gl-color-base-2
+		left -1px
+		line-height 1rem
+		padding 5px
+		position absolute
+		top -24px
+
+		&:before
+			content "+"
+
+	> .menu-item
+		line-height 15px
+		margin 0 $gutters(1) 0 0
+		padding 5px 0
+		text-align center
+		width 80px
+
+		&.background, &.comment, &.code, &.grid
+			display none
+
+// #########################
+
+.gl-gs-example
+
+	.gl-gs-wrapper
+		margin 0 0 $gutters(1)
+		overflow hidden
+		white-space nowrap
+
+		&:last-child
+			margin 0
+
+	.gl-col
+		background $gl-gradient
+		box-sizing border-box
+		color $gl-color-base-1
+		display inline-block
+		font-size 10px
+		line-height 10px
+		margin 0 $gutters(1) 0 0
+		padding $gutters(.5)
+
+	.gl-column
+		margin 0 $gutters(1) 0 0
+		width $column
+
+		&:before
+			content "" + $column
+
+	.gl-viewport-smart
+		width $smart //$columns(5)
+
+		&:before
+			content ">>> @media min-width = " + $smart + " - smartphone"
+
+	.gl-viewport-smart-to-tablet
+		width $smart-to-tablet //$columns(10)
+
+		&:before
+			content "<<< @media max-width = " + $smart-to-tablet + " - smartphone"
+
+	.gl-viewport-tablet
+		width $tablet //$columns(10)
+
+		&:before
+			content ">>> @media min-width = " + $tablet + " - tablet"
+
+.gl-viewport-tablet-to-notebook
+		width $tablet-to-notebook //$columns(15)
+
+		&:before
+			content "<<< @media max-width = " + $tablet-to-notebook + " - tablet"
+
+.gl-viewport-notebook
+		width $notebook //$columns(15)
+
+		&:before
+			content ">>> @media min-width = " + $notebook + " - notebook"
+
+	.gl-viewport-notebook-to-desktop
+		width $notebook-to-desktop //$columns(20)
+
+		&:before
+			content "<<< @media max-width = " + $notebook-to-desktop + " - notebook"
+
+	.gl-viewport-desktop
+		width $desktop //$columns(20)
+
+		&:before
+			content ">>> @media min-width = " + $desktop + " - desktop"
+
+	.gl-viewport-desktop-to-desktop-large
+		width $desktop-to-desktop-large //$columns(25)
+
+		&:before
+			content "<<< @media max-width = " + $desktop-to-desktop-large + " - desktop"
+
+	.gl-viewport-desktop-large
+		width $desktop-large //$columns(25)
+
+		&:before
+			content ">>> @media min-width = " + $desktop-large + " - desktop large"
+
+	.gl-viewport-desktop-large-to-full-hd
+		width $desktop-large-to-full-hd //$columns(30)
+
+		&:before
+			content "<<< @media max-width = " + $desktop-large-to-full-hd + " - desktop large"
+
+	.gl-viewport-full-hd
+		width $full-hd //$columns(30)
+
+		&:before
+			content ">>> @media min-width = " + $full-hd + " - full hd"
+
+// #########################
+
+.gl-colors
+
+	.gl-color
+		background-color $gl-color-base-1
+		background-image $gl-bg-stage
+		background-size 10px 10px
+		background-position 0 0, 5px 5px
+		border solid 1px $gl-color-base-2
+		display inline-block
+		margin 0 $gutters(1) $gutters(1) 0
+
+		&:before, &:after
+			background $gl-color-base-1
+			display block
+			padding $gutters(.5)
+
+		&:before
+			content "" attr(data-sass)
+
+		&:after
+			content "" attr(data-color)
+
+		.gl-color-box
+			background transparent
+			display block
+			height 50px
+			min-width $columns(4)
+
+		&.gl-color-base-1
+
+			.gl-color-box
+				background $gl-color-base-1
+
+		&.gl-color-base-2
+
+			.gl-color-box
+				background $gl-color-base-2
+
+		&.gl-color-base-3
+
+			.gl-color-box
+				background $gl-color-base-3
+
+		&.gl-color-gray-1
+
+			.gl-color-box
+				background $gl-color-gray-1
+
+		&.gl-color-gray-2
+
+			.gl-color-box
+				background $gl-color-gray-2
+
+		&.gl-color-gray-3
+
+			.gl-color-box
+				background $gl-color-gray-3
+
+		&.gl-color-gray-4
+
+			.gl-color-box
+				background: $gl-color-gray-4
+
+		&.gl-color-gray-5
+
+			.gl-color-box
+				background $gl-color-gray-5
+
+		&.gl-color-gray-6
+
+			.gl-color-box
+				background $gl-color-gray-6
+
+		&.gl-color-overlay
+
+			.gl-color-box
+				background $gl-color-overlay
+
+		&.gl-color-alert
+
+			.gl-color-box
+				background $gl-color-alert
+
+		&.gl-color-error
+
+			.gl-color-box
+				background $gl-color-error
+
+		&.gl-color-success
+
+			.gl-color-box
+				background $gl-color-success
+
+// #########################
+
+.gl-typography
+
+	&:before
+		left 0
+
+	span
+		background $gl-color-base-1
+		color $gl-color-gray-4
+		display inline-block
+		line-height $gutters(2)
+		margin 0 1px 1px 0
+		text-align center
+		vertical-align top
+		width $gutters(2)
+
+		&:before, &:after
+			background $gl-color-base-2
+			color $gl-color-base-1
+			content attr(data-char)
+			display block
+			font-size $gutters(1)
+
+		&:before
+			text-transform lowercase
+
+		&:after
+			text-transform uppercase
+
+		&.gl-char
+
+			&:before
+				line-height $gutters(2)
+
+			&:after
+				display none
+
+	&.gl-typography-verdana
+
+		span
+
+			&:before, &:after
+				font-family Verdana
+
+// #########################
+
+.gl-typography-icons
+	border 0
+
+	&:before
+		left 0
+
+	span
+		background $gl-color-base-1
+		box-sizing border-box
+		color $gl-color-gray-4
+		display inline-block
+		line-height 2rem
+		margin 0 $gutters(1) $gutters(1) 0
+		min-width $columns(4)
+		padding 0 $gutters(1)
+		vertical-align top
+
+		&:before
+			background $gl-color-base-2
+			color $gl-color-base-1
+			display block
+			font-family $font-icons
+			font-size 50px
+			line-height 100px
+			margin 0 $gutters(-1)
+			text-align center
+
+		&:after
+			content " %" attr(class)
+
+// #########################
+
+.gl-mockup-more
+	background $gl-color-base-2
+	border $gl-border-config
+	color $gl-color-base-1
+	cursor pointer
+	display inline-block
+	font-size 1rem
+	left -20px
+	line-height 10px
+	margin 0
+	padding 0
+	position absolute
+	text-align center
+	transition background .3s ease
+	top 0
+	width 10px
+
+	&:before
+		content "+"
+
+.gl-wrapper-mockup-links
+	font-family $gl-default-font
+	font-size 0
+	list-style none
+	padding 0 0 0 20px
+
+	li
+		margin: 0 0 1rem
+		position: relative
+
+		.gl-mockup-more-controler
+			display none
+
+			&:checked ~ .gl-mockup-more
+				background $gl-color-base-1
+				color $gl-color-base-2
+				transition background .3s ease
+
+				&:before
+					content "-"
+
+			&:checked ~ .gl-wrapper-mockup-links
+				display block
+
+		.gl-wrapper-mockup-links
+			display none
+			margin $gutters(.5) 0
+			padding 0 0 0 $gutters(1)
+
+			li
+				margin 0
+
+		.gl-mockup-links
+			color $gl-color-base-2
+			font-size 1rem
+			line-height $gutters(1)
+			text-decoration none
+
+			&:hover
+				text-decoration underline
+
+			&[href="#"], &[href=""]
+				color $gl-color-error
+
+// #########################
+
+// icomoon.io
+@font-face
+	font-family $font-icons
+	src url("data:application/x-font-ttf;charset=utf-8;base64,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") format("truetype")
+	font-weight normal
+	font-style normal
+
+$font-icon
+	font-family $font-icons
+	speak none
+	font-style normal
+	font-weight normal
+	font-variant normal
+	text-transform none
+	line-height 1
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+
+$ic-sitemap1
+	@extend $font-icon
+	content "\e607"
+
+$ic-anchor
+	@extend $font-icon
+	content "\e600"
+
+$ic-dropper
+	@extend $font-icon
+	content "\e601"
+
+$ic-file
+	@extend $font-icon
+	content "\e602"
+
+$ic-fountainpencopy
+	@extend $font-icon
+	content "\e603"
+
+$ic-layout12
+	@extend $font-icon
+	content "\e604"
+
+$ic-link
+	@extend $font-icon
+	content "\e605"
+
+$ic-ruler2
+	@extend $font-icon
+	content "\e606"
+
+$ic-menu
+	@extend $font-icon
+	content "\e9bd"
+
+.ic-sitemap1
+
+	&:before
+		@extend $ic-sitemap1
+
+.ic-anchor
+
+	&:before
+		@extend $ic-anchor
+
+.ic-dropper
+
+	&:before
+		@extend $ic-dropper
+
+.ic-file
+
+	&:before
+		@extend $ic-file
+
+.ic-fountainpencopy
+
+	&:before
+		@extend $ic-fountainpencopy
+
+.ic-layout12
+
+	&:before
+		@extend $ic-layout12
+
+.ic-link
+
+	&:before
+		@extend $ic-link
+
+.ic-ruler2
+
+	&:before
+		@extend $ic-ruler2
+
+.ic-menu
+
+	&:before
+		@extend $ic-menu
+
+// #########################
