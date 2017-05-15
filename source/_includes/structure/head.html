@@ -4,43 +4,40 @@
 <meta name="robots" content="INDEX, FOLLOW">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!--	<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="author" content="">
+<meta name="description" content="{% if page.description %}{{ page.description | escape }}{% else %}{{ site.data.head.description }}{% endif %}">
+<meta name="keywords" content="{% if page.keywords %}{{ page.keywords | escape }}{% else %}{{ site.data.head.keywords }}{% endif %}">
+<meta name="author" content="{{ site.data.head.author }}">
 
-<meta property="og:title" content="">
-<meta property="og:description" name="description" content="">
+<meta property="og:title" content="{% if page.ogTilte %}{{ page.ogTilte | escape }}{% else %}{{ site.data.head.ogTilte }}{% endif %}">
+<meta property="og:description" name="description" content="{% if page.ogDescription %}{{ page.ogDescription | escape }}{% else %}{{ site.data.head.ogDescription }}{% endif %}">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="pt-br" />
-<meta property="og:url" content="">
-<meta property="og:image" content="/assets/img/xpto_1200x630.jpg">
-<meta property="og:image:height" content="630"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:type" content="image/jpg"/>
+<meta property="og:locale" content="{% if page.lang %}{{ page.lang | escape }}{% else %}{{ site.data.head.lang }}{% endif %}" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}{% if page.ogImgSrc %}{{ page.ogImgSrc | escape }}{% else %}{{ site.data.head.ogImgSrc }}{% endif %}">
+<meta property="og:image:height" content="{% if page.ogImgHeigth %}{{ page.ogImgHeigth | escape }}{% else %}{{ site.data.head.ogImgHeigth }}{% endif %}"/>
+<meta property="og:image:width" content="{% if page.ogImgWidth %}{{ page.ogImgWidth | escape }}{% else %}{{ site.data.head.ogImgWidth }}{% endif %}"/>
+<meta property="og:image:type" content="{% if page.ogImgType %}{{ page.ogImgType | escape }}{% else %}{{ site.data.head.ogImgType }}{% endif %}"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:url" content=""/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content=""/>
-<meta name="twitter:image" content="/assets/img/xpto.jpg"/>
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}"/>
+<meta name="twitter:title" content="{% if page.twitterTilte %}{{ page.twitterTilte | escape }}{% else %}{{ site.data.head.twitterTilte }}{% endif %}"/>
+<meta name="twitter:description" content="{% if page.twitterDescription %}{{ page.twitterDescription | escape }}{% else %}{{ site.data.head.twitterDescription }}{% endif %}"/>
+<meta name="twitter:image" content="{{ site.url }}{% if page.twitterImgSrc %}{{ page.twitterImgSrc | escape }}{% else %}{{ site.data.head.twitterImgSrc }}{% endif %}"/>
 
 <meta name="msapplication-tap-highlight" content="no">
-<meta name="msapplication-TileColor" content="#fff">
-<meta name="msapplication-TileImage" content="/assets/favicon/favicon-144.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/favicon/ms/144.png">
 
-<meta name="theme-color" content="#fff">-->
+<meta name="theme-color" content="#ffffff">
 
-<title>xpto</title>
+<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.data.head.title }}{% endif %}</title>
 
-<!--	<link rel="shortcut icon" sizes="64x64 32x32 16x16" href="/assets/favicon/favicon.ico"/>
-
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/favicon/favicon-152.png"/>
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/favicon/favicon-144.png"/>
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/favicon/favicon-120.png"/>
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/favicon/favicon-114.png"/>
-<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/favicon/favicon-76.png"/>
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/favicon/favicon-72.png"/>
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/favicon/favicon-57.png"/>-->
+<link rel="shortcut icon" sizes="64x64 32x32 16x16" href="/assets/favicon/favicon.ico"/>
+{% for image in site.static_files %}
+	{% if image.path contains 'assets/favicon/apple' %}
+<link rel="apple-touch-icon-precomposed" sizes="{{ image.basename }}x{{ image.basename }}" href="{{ image.path }}"/>
+	{% endif %}
+{% endfor %}
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 <link rel="stylesheet" href="/assets/css/libs/pygments-monokai-min.css">

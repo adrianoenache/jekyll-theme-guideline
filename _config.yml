@@ -2,7 +2,7 @@
 destination:  ./_site
 
 source:       ./source/
-data_dir:     ./source/_data
+data_dir:     ./_data
 drafts_dir:   ./source/_drafts
 includes_dir: ./_includes
 layouts_dir:  ./source/_layouts
