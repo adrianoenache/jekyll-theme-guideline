@@ -8,7 +8,8 @@ title: Guideline
 ---
 <button type="button" data-plugin="toggle-class-target" data-class="gl-nav-active" data-target="html" class="gl-menu">Guideline</button>
 <nav class="gl-nav">
-{% for nav in site.guideline %}
+{% assign navItens = site.guideline | sort: 'orderInMenu' %}
+{% for nav in navItens %}
 	<button class="gl-link {{ nav.status }}" type="button" data-plugin="toggle-class-target" data-class="active" data-target="#{{ nav.buttontId }}">
 		<span data-plugin="toggle-class-target" data-flag="_parents" data-target=".gl-link" data-class="active">{{ nav.name }}</span>
 	</button>

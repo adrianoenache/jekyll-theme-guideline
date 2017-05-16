@@ -1,9 +1,9 @@
 ---
 buttontId: tipografia-verdana
+orderInMenu: 4
 name: Verdana
-status: active
 ---
-<section id="{{ page.buttontId }}" class="gl-wrapper {{ page.status }}">
+<section id="{{ page.buttontId }}" class="gl-wrapper">
 	<h1 class="gl">{{ page.name }}</h1>
 	<p class="gl-example gl-typography gl-typography-verdana" data-gl="{{ site.data.guideline.typography.labels[0] }}">
 		{% for number in site.data.guideline.typography.numbers %}
