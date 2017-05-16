@@ -9,8 +9,9 @@ layouts_dir:  ./source/_layouts
 plugins_dir:  ./source/_plugins
 
 collections:
-  posts:
-    output:   true
+#  posts:
+#    output:   true
+  guideline:
 
 # Handling Reading
 safe:                 false

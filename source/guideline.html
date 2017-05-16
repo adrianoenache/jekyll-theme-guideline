@@ -1,0 +1,19 @@
+---
+#
+# You don't need to edit this file, it's empty on purpose.
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+#
+layout: guideline
+title: Guideline
+---
+<button type="button" data-plugin="toggle-class-target" data-class="gl-nav-active" data-target="html" class="gl-menu">Guideline</button>
+<nav class="gl-nav">
+{% for nav in site.guideline %}
+	<button class="gl-link {{ nav.status }}" type="button" data-plugin="toggle-class-target" data-class="active" data-target="#{{ nav.buttontId }}">
+		<span data-plugin="toggle-class-target" data-flag="_parents" data-target=".gl-link" data-class="active">{{ nav.name }}</span>
+	</button>
+{% endfor %}
+</nav>
+{% for guideline in site.guideline %}
+    {{ guideline.content }}
+{% endfor %}
