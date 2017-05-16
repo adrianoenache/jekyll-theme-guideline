@@ -32,6 +32,8 @@
 
 <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.data.head.title }}{% endif %}</title>
 
+<link rel="manifest" href="manifest.webmanifest">
+
 <link rel="shortcut icon" sizes="64x64 32x32 16x16" href="/assets/favicon/favicon.ico"/>
 {% for image in site.static_files %}
 	{% if image.path contains 'assets/favicon/apple' %}
