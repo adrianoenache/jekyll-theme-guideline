@@ -1,4 +1,9 @@
 ---
 ---
 // See individual.styl below. Notice it has no YAML front matter.
+
+{% for theme in site.data.theme %}
+{{ theme.varName }} = {{ theme.color }}
+{% endfor %}
+
 @import 'stylus/_test'

@@ -1,0 +1,6 @@
+# Theme
+- varName: "$site-background-color"
+  color: "white"
+
+- varName: "$text-defaut-color"
+  color: "black"
