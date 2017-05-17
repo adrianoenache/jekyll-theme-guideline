@@ -11,10 +11,27 @@ status: active
 		{% assign colorPalete = site.data.guideline.color_palete | sort: 'color' %}
 		{% for palete in colorPalete %}
 			<li>
-				<span class="gl-color" style="background: {{ palete.color }};">aaa</span>
+				<span class="gl-color" style="background: {{ palete.color }};"></span>
 				<span>
-					Palete variables {{ palete.varName }} <br>
-					Color applyed {{ palete.color }}
+					Palete variable <br>
+					<strong>{{ palete.varName }}</strong> <br><br>
+					Color applyed <br>
+					<strong>{{ palete.color }}</strong>
+				</span>
+			</li>
+		{% endfor %}
+	</ul>
+	<h3 class="gl">Color special</h3>
+	<ul class="gl-palete-color">
+		{% assign colorSpecial = site.data.guideline.color_special | sort: 'varName' %}
+		{% for special in colorSpecial %}
+			<li>
+				<span class="gl-color" style="background: {{ special.color }}; {{ special.style }}"></span>
+				<span>
+					Palete variable <br>
+					<strong>{{ special.varName }}</strong> <br>
+					Color(s) applyed <br>
+					<strong>{{ special.colorsInUse }}</strong>
 				</span>
 			</li>
 		{% endfor %}
@@ -22,17 +39,17 @@ status: active
 	<h3 class="gl">Color variables in use</h3>
 	<ul class="gl-color-variables-in-use">
 		{% assign colorVars = site.data.guideline.color_vars | sort: 'color' %}
+		{% assign paleteVariable = "" %}
 		{% for vars in colorVars %}
-			<li>
-				<span>
-					Palete variables<br>
-					{{ vars.color }}
-				</span>
-				<span>
-					Where is used <br>
-					{{ vars.varName }}
-				</span>
-			</li>
+			{% if paleteVariable ==  vars.color %}
+				<li class="gl-var-name">{{ vars.varName }}</li>
+			{% else %}
+				<li class="gl-label gl-highlight">Palete variable</li>
+				<li class="gl-var-color gl-highlight">{{ vars.color }}</li>
+				<li class="gl-label">Where is used</li>
+				<li class="gl-var-name">{{ vars.varName }}</li>
+			{% endif %}
+			{% assign paleteVariable = vars.color %}
 		{% endfor %}
 	</ul>
 </section>

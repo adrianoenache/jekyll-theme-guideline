@@ -3,20 +3,21 @@
 // See individual.styl below. Notice it has no YAML front matter.
 // Cores
 
-{% for theme in site.data.guideline.color_palete %}
-{{ theme.varName }} = {{ theme.color }}
+{% for colorPalete in site.data.guideline.color_palete %}
+{{ colorPalete.varName }} = {{ colorPalete.color }}
 {% endfor %}
 
-{% for theme in site.data.guideline.color_vars %}
-{{ theme.varName }} = {{ theme.color }}
+{% for colorSpecial in site.data.guideline.color_special %}
+{{ colorSpecial.varName }} = {{ colorSpecial.color }}
 {% endfor %}
 
-@import 'stylus/_mixins'
-@import 'stylus/guideline/_colors'
+{% for colorVars in site.data.guideline.color_vars %}
+{{ colorVars.varName }} = {{ colorVars.color }}
+{% endfor %}
 
 // Units
 $gl-default-font-size = 12px
-$gl-default-font-height = 16px
+$gl-default-font-height = 1.5em
 $gl-h1 = 32px
 $gl-h2 = 24px
 $gl-h3 = 16px
@@ -71,6 +72,9 @@ $full-hd = $columns(30)
 // @media (min-width: $full-hd)
 
 // #########################
+
+@import 'stylus/_mixins'
+@import 'stylus/guideline/_colors'
 
 body
 	background $gl-color-gray-6

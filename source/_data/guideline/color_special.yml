@@ -1,0 +1,15 @@
+# Color exceptions
+- varName: "$gl-gradient"
+  color: "linear-gradient(to right, #444 0%, #888 100%)"
+  colorsInUse: "#444, #888"
+  style: ""
+
+- varName: "$gl-bg-stage"
+  color: "linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc)"
+  colorsInUse: "transparent, #ccc"
+  style: "background-position: 0 0, 5px 5px; background-size: 10px 10px"
+
+- varName: "$gl-color-overlay"
+  color: "rgba(0,0,0, .6)"
+  colorsInUse: "rgba #000 60%"
+  style: ""
