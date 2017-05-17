@@ -1,0 +1,11 @@
+{% for colorPalete in site.data.guideline.color_palete %}
+{{ colorPalete.varName }} = {{ colorPalete.color }}
+{% endfor %}
+
+{% for colorSpecial in site.data.guideline.color_special %}
+{{ colorSpecial.varName }} = {{ colorSpecial.color }}
+{% endfor %}
+
+{% for colorVars in site.data.guideline.color_vars %}
+{{ colorVars.varName }} = {{ colorVars.color }}
+{% endfor %}
