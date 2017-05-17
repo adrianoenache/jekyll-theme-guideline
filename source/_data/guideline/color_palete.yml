@@ -1,0 +1,36 @@
+# Theme color palete
+- varName: "$gl-color-base-1"
+  color: "#fff"
+
+- varName: "$gl-color-base-2"
+  color: "#000"
+
+- varName: "$gl-color-base-3"
+  color: "#0aa"
+
+- varName: "$gl-color-alert"
+  color: "#fa0"
+
+- varName: "$gl-color-error"
+  color: "#c00"
+
+- varName: "$gl-color-success"
+  color: "#080"
+
+- varName: "$gl-color-gray-1"
+  color: "#444"
+
+- varName: "$gl-color-gray-2"
+  color: "#555"
+
+- varName: "$gl-color-gray-3"
+  color: "#666"
+
+- varName: "$gl-color-gray-4"
+  color: "#888"
+
+- varName: "$gl-color-gray-5"
+  color: "#ccc"
+
+- varName: "$gl-color-gray-6"
+  color: "#eee"

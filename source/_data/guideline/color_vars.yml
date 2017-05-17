@@ -1,0 +1,31 @@
+# Color vars
+
+- varName: "$gl-color-overlay"
+  color: "rgba($gl-color-base-2, .6)"
+
+- varName: "$gl-gradient"
+  color: "linear-gradient(to right, $gl-color-gray-1 0%, $gl-color-gray-4 100%)"
+
+- varName: "$gl-bg-stage-color"
+  color: "$gl-color-gray-5"
+
+- varName: "$gl-bg-stage"
+  color: "linear-gradient(45deg, $gl-bg-stage-color 25%, transparent 25%, transparent 75%, $gl-bg-stage-color 75%, $gl-bg-stage-color), linear-gradient(45deg, $gl-bg-stage-color 25%, transparent 25%, transparent 75%, $gl-bg-stage-color 75%, $gl-bg-stage-color)"
+
+- varName: "$gl-layout-element"
+  color: "$gl-color-base-2"
+
+- varName: "$gl-default-font-color"
+  color: "$gl-color-gray-4"
+
+- varName: "$gl-a"
+  color: "$gl-color-base-2"
+
+- varName: "$gl-a-hover"
+  color: "$gl-color-gray-3"
+
+- varName: "$gl-a-visited"
+  color: "$gl-a"
+
+- varName: "$gl-title-color"
+  color: "$gl-color-base-2"

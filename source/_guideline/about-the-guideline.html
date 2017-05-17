@@ -1,0 +1,38 @@
+---
+buttontId: about-the-guideline
+orderInMenu: 0
+name: About the guideline
+status: active
+---
+<section id="{{ page.buttontId }}" class="gl-wrapper {{ page.status }}">
+	<h1 class="gl">{{ page.name }}</h1>
+	<h2 class="gl">Color Palete</h2>
+	<ul class="gl-palete-color">
+		{% assign colorPalete = site.data.guideline.color_palete | sort: 'color' %}
+		{% for palete in colorPalete %}
+			<li>
+				<span class="gl-color" style="background: {{ palete.color }};">aaa</span>
+				<span>
+					Palete variables {{ palete.varName }} <br>
+					Color applyed {{ palete.color }}
+				</span>
+			</li>
+		{% endfor %}
+	</ul>
+	<h3 class="gl">Color variables in use</h3>
+	<ul class="gl-color-variables-in-use">
+		{% assign colorVars = site.data.guideline.color_vars | sort: 'color' %}
+		{% for vars in colorVars %}
+			<li>
+				<span>
+					Palete variables<br>
+					{{ vars.color }}
+				</span>
+				<span>
+					Where is used <br>
+					{{ vars.varName }}
+				</span>
+			</li>
+		{% endfor %}
+	</ul>
+</section>

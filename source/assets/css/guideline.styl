@@ -2,67 +2,31 @@
 ---
 // See individual.styl below. Notice it has no YAML front matter.
 // Cores
-$gl-color-base-1 = #fff
-$gl-color-base-2 = #000
-$gl-color-base-3 = #0aa
-$gl-color-alert = #fa0
-$gl-color-error = #c00
-$gl-color-success = #080
-$gl-color-gray-1 = #444
-$gl-color-gray-2 = #555
-$gl-color-gray-3 = #666
-$gl-color-gray-4 = #888
-$gl-color-gray-5 = #ccc
-$gl-color-gray-6 = #eee
-$gl-color-overlay = rgba($gl-color-base-2, .6)
-$gl-gradient = linear-gradient(to right, $gl-color-gray-1 0%, $gl-color-gray-4 101%)
-$gl-bg-stage-color = $gl-color-gray-5
-$gl-bg-stage = linear-gradient(45deg, $gl-bg-stage-color 25%, transparent 25%, transparent 75%, $gl-bg-stage-color 75%, $gl-bg-stage-color), linear-gradient(45deg, $gl-bg-stage-color 25%, transparent 25%, transparent 75%, $gl-bg-stage-color 75%, $gl-bg-stage-color)
-// Code format
-$gl-code-background = black
-$gl-code-color-default = white
-$gl-code-type-tag-background = white
-$gl-code-type-tag-color = black
-$gl-code-tab-color = gray
-$gl-code-tab-gap-color = $gl-code-background
-//
-$gl-code-html-color-1 = crimson
-$gl-code-html-color-2 = goldenrod
-$gl-code-html-color-3 = yellow
-$gl-code-html-color-4 = lawngreen
-//
-$gl-code-js-color-1 = gold
-$gl-code-js-color-2 = lawngreen
-$gl-code-js-color-3 = deepskyblue
-$gl-code-js-color-4 = plum
-$gl-code-js-color-5 = gray
-$gl-code-js-color-6 = aqua
-//
-$gl-code-css-color-1 = aqua
-$gl-code-css-color-2 = plum
-$gl-code-css-color-3 = khaki
-$gl-code-css-color-4 = chartreuse
-$gl-code-css-color-5 = aquamarine
-$gl-code-css-color-6 = gold
+
+{% for theme in site.data.guideline.color_palete %}
+{{ theme.varName }} = {{ theme.color }}
+{% endfor %}
+
+{% for theme in site.data.guideline.color_vars %}
+{{ theme.varName }} = {{ theme.color }}
+{% endfor %}
+
+@import 'stylus/_mixins'
+@import 'stylus/guideline/_colors'
+
 // Units
-$gl-layout-element = $gl-color-base-2
-$gl-default-font = monospace
 $gl-default-font-size = 12px
 $gl-default-font-height = 16px
-$gl-default-font-color = $gl-color-gray-4
 $gl-h1 = 32px
 $gl-h2 = 24px
 $gl-h3 = 16px
 $gl-title-font = Times New Roman
 $gl-title-height = $gl-h1 + 16px;
-$gl-title-color = $gl-color-base-2
 $gl-border-config = 1px solid $gl-layout-element
 $gl-border-config-10 = 10px solid $gl-layout-element
-$gl-a = $gl-color-base-2
-$gl-a-hover = $gl-color-gray-3
-$gl-a-visited = $gl-a
 $gl-base-radius = 5px
 //
+$gl-default-font = monospace
 $font-icons = "icons"
 //
 $gutter = 14px
@@ -76,11 +40,6 @@ $columns-p($qtd-column)
 //
 $gutters($qtd-gutter)
 	$size = $gutter * $qtd-gutter
-//
-$smart = $columns(5)
-$tablet = $columns(10)
-$notebook = $columns(15)
-$desktop = $columns(20)
 //
 $smart = $columns(5)
 $smart-to-tablet = $columns(10) - 1px
@@ -261,132 +220,6 @@ p.gl
 	padding .5rem
 	position relative
 	z-index 1
-
-// #########################
-
-.gl-code-inline
-	display: inline-block
-	vertical-align middle
-		
-	.gl-code-format
-		display: inline-block
-		padding: .25em .5em .25em .25em
-
-		&:before
-			margin 0 .5em 0 0
-
-.gl-code
-
-	&.gl-full
-
-		.gl-code-format
-			display block
-			line-height 1.25em
-			padding: $gutters(2) $gutters(1) $gutters(1)
-
-			&:before
-				left 0
-				position absolute
-				top 0
-
-.gl-code, .gl-code-inline
-	position relative
-	z-index 1
-
-	.gl-code-format
-		background: $gl-code-background
-		color: $gl-code-color-default
-		margin 0
-		overflow auto
-		position relative
-
-		&:before
-			background $gl-code-type-tag-background
-			color $gl-code-type-tag-color
-			content attr(data-gl)
-			font-weight 700
-			line-height 1em
-			padding: .25em .5em
-			text-transform uppercase
-
-		+ .gl-code-format
-			border-top solid 1px
-
-	hr
-		border 0
-		border-top solid 1px
-		border-right solid 5px $gl-code-tab-gap-color
-		box-sizing border-box
-		color $gl-code-tab-color
-		display inline-block
-		vertical-align middle
-		width $gutters(1)
-
-	b
-		font-weight 400
-
-	i, var
-		font-style normal
-
-	q
-		&:before, &:after
-			display none
-	s
-		text-decoration none
-
-	.gl-code-html
-
-		b
-			color $gl-code-html-color-1
-
-		i
-			color $gl-code-html-color-2
-
-		var
-			color $gl-code-html-color-3
-
-		samp
-			color $gl-code-html-color-4
-
-	.gl-code-js
-
-		b
-			color $gl-code-js-color-1
-
-		i
-			color $gl-code-js-color-2
-
-		q
-			color $gl-code-js-color-3
-
-		s
-			color $gl-code-js-color-4
-
-		samp
-			color $gl-code-js-color-5
-
-		var
-			color $gl-code-js-color-6
-
-	.gl-code-css
-
-		b
-			color $gl-code-css-color-1
-
-		i
-			color $gl-code-css-color-2
-
-		q
-			color $gl-code-css-color-3
-
-		s
-			color $gl-code-css-color-4
-
-		samp
-			color $gl-code-css-color-5
-
-		var
-			color $gl-code-css-color-6
 
 // #########################
 
