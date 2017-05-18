@@ -1,0 +1,41 @@
+// 
+$gutter = 14px
+$column = 50px
+//
+$columns($qtd-column)
+	$size = ($column + $gutter) * $qtd-column
+//
+$columns-p($qtd-column)
+	$size = 100% / $qtd-column
+//
+$gutters($qtd-gutter)
+	$size = $gutter * $qtd-gutter
+//
+$smart = $columns(5)
+$smart-to-tablet = $columns(10) - 1px
+$tablet = $columns(10)
+$tablet-to-notebook = $columns(15) - 1px
+$notebook = $columns(15)
+$notebook-to-desktop = $columns(20) - 1px
+$desktop = $columns(20)
+$desktop-to-desktop-large = $columns(25) - 1px
+$desktop-large = $columns(25)
+$desktop-large-to-full-hd = $columns(30) - 1px
+$full-hd = $columns(30)
+
+// @media (min-width: $smart)
+// @media (max-width: $smart-to-tablet)
+// @media (max-width: $smart-to-tablet) and (min-width: $smart)
+// @media (min-width: $tablet)
+// @media (max-width: $tablet-to-notebook)
+// @media (max-width: $tablet-to-notebook) and (min-width: $tablet)
+// @media (min-width: $notebook)
+// @media (max-width: $notebook-to-desktop)
+// @media (max-width: $notebook-to-desktop) and (min-width: $notebook)
+// @media (min-width: $desktop)
+// @media (min-width: $desktop-to-desktop-large)
+// @media (min-width: $desktop-to-desktop-large) and (min-width: $desktop)
+// @media (min-width: $desktop-large)
+// @media (min-width: $desktop-large-to-full-hd)
+// @media (min-width: $desktop-large-to-full-hd) and (min-width: $desktop-large)
+// @media (min-width: $full-hd)
