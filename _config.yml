@@ -16,7 +16,7 @@ collections:
 # Handling Reading
 safe:                 false
 include:              [".htaccess", "manifest.webmanifest"]
-exclude:              ["*/README.md", "assets/libs/", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+exclude:              ["*/README.md", "assets/libs/", "assets/fonts/source/", "assets/fonts/guideline/source/", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
 keep_files:           [".git"]
 encoding:             "utf-8"
 markdown_ext:         "markdown,mkdown,mkdn,mkd,md"
