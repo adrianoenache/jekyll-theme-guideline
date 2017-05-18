@@ -1,13 +1,10 @@
 <style>
     {% for font in site.data.guideline.fonts %}
     @font-face {
-        font-family: '{{ font.family }}';
-        font-style: {{ font.style }};
+        font-family: "{{ font.family }}";
+        src: {% for src in font.url %} {{ src.path }} {% endfor %}
         font-weight: {{ font.weight }};
-        src: 
-        {% for src in font.url %}
-            {{ src.path }}
-        {% endfor %}
+        font-style: {{ font.style }};
     }
     {% endfor %}
 </style>

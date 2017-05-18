@@ -6,8 +6,6 @@
 {% include assets/guideline/color.html %}
 
 // Units
-$gl-default-font-size = 12px
-$gl-default-font-height = 1.5em
 $gl-h1 = 32px
 $gl-h2 = 24px
 $gl-h3 = 16px
@@ -17,7 +15,8 @@ $gl-border-config = 1px solid $gl-layout-element
 $gl-border-config-10 = 10px solid $gl-layout-element
 $gl-base-radius = 5px
 //
-$gl-default-font = monospace
+$gl-font = "OpenSans", "sans-serif"
+$gl-code-font = monospace
 $font-icons = "icons"
 //
 
@@ -26,40 +25,12 @@ $font-icons = "icons"
 @import 'stylus/_mixins'
 @import 'stylus/_grid'
 @import 'stylus/guideline/_colors'
+@import 'stylus/guideline/_typography'
 
 body
 	background $gl-color-gray-6
 
-h1.gl, h2.gl, h3.gl
-	margin 1em 0
-
-
-h1.gl
-	border-bottom $gl-border-config
-	font-size $gl-h1
-	line-height $gl-h1
-	padding 0 0 .5em
-
-h2.gl
-	font-size $gl-h2
-	line-height $gl-h2
-
-h3.gl
-	font-size $gl-h3
-	line-height $gl-h3
-
-p.gl
-	border-left $gl-border-config-10
-	font-size 1rem
-	line-height 1.5rem
-	margin .5rem 0
-	padding .5rem
-
 :root
-	font-family $gl-default-font
-	font-size $gl-default-font-size
-	line-height: $gl-default-font-height
-	color $gl-default-font-color
 	padding $gutters(3) $gutters(1) $gutters(1)
 	transition padding .2s ease
 
@@ -84,7 +55,6 @@ p.gl
 	font-size 0
 
 .gl-colors > span, .gl-typography > span, .gl-typography-icons > span, .gl-example > .menu-item, .gl-example:before, .gl-comment, .gl-link, .gl-menu, .gl
-	font-family $gl-default-font
 
 .gl-colors > span, .gl-typography > span, .gl-typography-icons > span, .gl-example:before, .gl-comment, .gl-example > .menu, .gl-example > .menu-item, .gl-link, .gl-menu
 	font-size 1rem
@@ -626,7 +596,6 @@ p.gl
 		content "+"
 
 .gl-wrapper-mockup-links
-	font-family $gl-default-font
 	font-size 0
 	list-style none
 	padding 0 0 0 20px
