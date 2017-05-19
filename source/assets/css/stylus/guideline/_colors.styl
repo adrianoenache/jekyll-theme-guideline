@@ -1,77 +1,77 @@
 //
 .gl-palete-color, .gl-color-variables-in-use
 	$reset-list()
-	font-size: 0
+	font-size 0
 
 	li
-		box-sizing: border-box
-		font-size: 1rem // 12px
+		box-sizing border-box
+		font-size 1rem // 12px
 
 .gl-palete-color
 
 	li
-		display: inline-block
-		padding: 10px
-		max-width: 20%
-		vertical-align: top
-		width: 100%
+		display inline-block
+		padding 10px
+		max-width 20%
+		vertical-align top
+		width 100%
 
 	span
-		display: inline-block
-		vertical-align: middle
+		display inline-block
+		vertical-align middle
 
 	.gl-color
 		$gl-color-size = 1.5em * 5 // 18px * 4
-		border-radius: 50%
-		box-shadow: 0 0 5px 0 rgba($gl-shadow, .75)
-		height: $gl-color-size
-		width: $gl-color-size
+		border-radius 50%
+		box-shadow 0 0 5px 0 rgba($gl-shadow, .75)
+		height $gl-color-size
+		width $gl-color-size
 
 .gl-color-variables-in-use
 
 	li
-		line-height: 1.5em
+		line-height 1.5em
 
 	.gl-label
-		font-size: 16px
-		margin: 1em 0 0
+		font-size 16px
+		margin 1em 0 0
 
 		&.gl-highlight
-			margin: 2em 0 0
+			margin 2em 0 0
 
 			&:first-child
-				margin: 0
+				margin 0
 
 	.gl-highlight
-		font-weight: 700
+		font-weight 700
 
 @media (max-width: $smart-to-tablet) and (min-width: $smart)
 
 	.gl-palete-color
 
 		li
-			max-width: 100%
+			max-width 100%
 
 @media (min-width: $tablet)
 
 	.gl-palete-color
 
 		li
-			max-width: 33.33333%
+			max-width 33.33333%
 
 	.gl-color-variables-in-use
-		break-inside: avoid
-		column-count: 3
-		column-fill: balance
-		column-gap: 20px
-		column-rule: 1px solid $gl-layout-element
+		break-inside avoid
+		column-count 3
+		column-fill balance
+		column-gap 20px
+		column-rule 1px solid $gl-layout-element
 
 @media (min-width: $desktop)
 
 	.gl-palete-color
 
 		li
-			max-width: 20%
+			max-width 20%
 
 	.gl-color-variables-in-use
-		column-count: 5
+		column-count 5

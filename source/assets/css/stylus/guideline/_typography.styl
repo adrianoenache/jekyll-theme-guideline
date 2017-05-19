@@ -1,34 +1,61 @@
 body
-	font-family: $gl-font
-	font-size: 12px
-	line-height: 1.5em
-	color: $gl-default-font-color
+	font-family $gl-font
+	font-size 12px
+	line-height 1.5em
+	color $gl-default-font-color
 
 h1, h2, h3, h4, h5, h6
 
 	&.gl
-		font-weight: 300
-		margin: 1em 0
+		font-weight 300
+		line-height 1.4em
+		margin 1em 0
 
 		&:first-child
-			margin: 0 0 1em
+			margin 0 0 1em
 
 h1.gl
-	border-bottom: $gl-border-config
-	font-size: 50px
-	padding: 0 0 .5em
+	border-bottom $gl-border-config
+	font-size 50px
 
 h2.gl
-	font-size: 42px
+	font-size 42px
 
 h3.gl
-	font-size: 34px
+	font-size 34px
 
 h4.gl
-	font-size: 26px
+	font-size 26px
 
 h5.gl
-	font-size: 18px
+	font-size 18px
 
 h6.gl
-	font-size: 12px
+	font-size 12px
+//
+.gl-typography
+
+	&.gl-example
+		margin 0 -1px
+
+	.gl-char
+		background $gl-color-base-1
+		color $gl-color-gray-4
+		cursor pointer
+		display inline-block
+		font-size 12px
+		line-height 2em
+		margin 0 1px 1px 0
+		position relative
+		transition background ease-in-out .3s, color ease-in-out .3s, transform ease-in-out .3s
+		transform scale(1)
+		text-align center
+		vertical-align top
+		width 2em
+		z-index 0
+
+		&:hover
+			background $gl-color-gray-1
+			color $gl-color-base-1
+			transform scale(2)
+			z-index 1

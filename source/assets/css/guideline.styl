@@ -54,9 +54,7 @@ body
 .gl-colors, .gl-typography, .gl-typography-icons, .gl-gs-example, .gl-nav
 	font-size 0
 
-.gl-colors > span, .gl-typography > span, .gl-typography-icons > span, .gl-example > .menu-item, .gl-example:before, .gl-comment, .gl-link, .gl-menu, .gl
-
-.gl-colors > span, .gl-typography > span, .gl-typography-icons > span, .gl-example:before, .gl-comment, .gl-example > .menu, .gl-example > .menu-item, .gl-link, .gl-menu
+.gl-colors > span, .gl-typography-icons > span, .gl-example:before, .gl-comment, .gl-example > .menu, .gl-example > .menu-item, .gl-link, .gl-menu
 	font-size 1rem
 
 .gl-wrapper
@@ -498,48 +496,7 @@ body
 
 // #########################
 
-.gl-typography
 
-	&:before
-		left 0
-
-	span
-		background $gl-color-base-1
-		color $gl-color-gray-4
-		display inline-block
-		line-height $gutters(2)
-		margin 0 1px 1px 0
-		text-align center
-		vertical-align top
-		width $gutters(2)
-
-		&:before, &:after
-			background $gl-color-base-2
-			color $gl-color-base-1
-			content attr(data-char)
-			display block
-			font-size $gutters(1)
-
-		&:before
-			text-transform lowercase
-
-		&:after
-			text-transform uppercase
-
-		&.gl-char
-
-			&:before
-				line-height $gutters(2)
-
-			&:after
-				display none
-
-	&.gl-typography-verdana
-
-		span
-
-			&:before, &:after
-				font-family Verdana
 
 // #########################
 

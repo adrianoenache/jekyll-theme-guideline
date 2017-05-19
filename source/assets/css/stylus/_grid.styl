@@ -1,26 +1,26 @@
-// 
+//
 $gutter = 14px
 $column = 50px
 //
 $columns($qtd-column, mod = null)
 	if mod == 'fluid'
-		box-sizing: border-box
-		max-width: ($column + $gutter) * $qtd-column
+		box-sizing border-box
+		max-width ($column + $gutter) * $qtd-column
 		width: 100%
 	else if mod == 'static'
-		box-sizing: border-box
+		box-sizing border-box
 		width: ($column + $gutter) * $qtd-column
 	else
 		$size = ($column + $gutter) * $qtd-column
 //
 $columns-p($qtd-column)
 	if mod == 'fluid'
-		box-sizing: border-box
-		max-width: 100% / $qtd-column
-		width: 100%
+		box-sizing border-box
+		max-width 100% / $qtd-column
+		width 100%
 	else if mod == 'static'
-		box-sizing: border-box
-		width: 100% / $qtd-column
+		box-sizing border-box
+		width 100% / $qtd-column
 	else
 		$size = 100% / $qtd-column
 //
