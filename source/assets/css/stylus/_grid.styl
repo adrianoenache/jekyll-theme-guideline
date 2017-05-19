@@ -5,24 +5,28 @@ $column = 50px
 $columns($qtd-column, mod = null)
 	if mod == 'fluid'
 		box-sizing border-box
+		display inline-block
 		max-width ($column + $gutter) * $qtd-column
 		width: 100%
 	else if mod == 'static'
 		box-sizing border-box
+		display inline-block
 		width: ($column + $gutter) * $qtd-column
 	else
 		$size = ($column + $gutter) * $qtd-column
 //
-$columns-p($qtd-column)
+$columns-p($qtd-column, mod = null)
 	if mod == 'fluid'
 		box-sizing border-box
-		max-width 100% / $qtd-column
+		display inline-block
+		max-width (100% / $qtd-column)
 		width 100%
 	else if mod == 'static'
 		box-sizing border-box
-		width 100% / $qtd-column
+		display inline-block
+		width (100% / $qtd-column)
 	else
-		$size = 100% / $qtd-column
+		$size = (100% / $qtd-column)
 //
 $gutters($qtd-gutter)
 	$size = $gutter * $qtd-gutter

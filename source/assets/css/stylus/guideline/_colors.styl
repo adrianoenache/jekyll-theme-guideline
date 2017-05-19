@@ -4,27 +4,24 @@
 	font-size 0
 
 	li
-		box-sizing border-box
 		font-size 1rem
 
 .gl-palete-color
 
 	li
-		display inline-block
 		padding 10px
-		max-width 20%
 		vertical-align top
-		width 100%
 
 	span
 		display inline-block
 		vertical-align middle
 
 	.gl-color
-		$gl-color-size = 1.5em * 5
+		$gl-color-size = 1.5em * 3
 		border-radius 50%
 		box-shadow 0 0 5px 0 rgba($gl-shadow, .75)
 		height $gl-color-size
+		margin 0 5px 0 0
 		width $gl-color-size
 
 .gl-variables-in-use
@@ -49,19 +46,12 @@
 		font-size 14px
 		line-height 1.5em
 
-@media (max-width: $smart-to-tablet) and (min-width: $smart)
-
-	.gl-palete-color
-
-		li
-			max-width 100%
-
 @media (min-width: $tablet)
 
 	.gl-palete-color
 
 		li
-			max-width 33.33333%
+			$columns-p(3, "fluid")
 
 	.gl-variables-in-use
 		break-inside avoid
@@ -74,7 +64,14 @@
 	.gl-palete-color
 
 		li
-			max-width 25%
+			$columns-p(5, "fluid")
 
 	.gl-variables-in-use
 		column-count 4
+
+@media (min-width: $desktop-large)
+
+	.gl-palete-color
+
+		li
+			$columns-p(6, "fluid")

@@ -1,51 +1,47 @@
 <h2 class="gl">Color Palete</h2>
 <ul class="gl-palete-color">
-    {% assign colorPalete = site.data.guideline.color_palete | sort: 'color' %}
-    {% for palete in colorPalete %}
-        <li>
-            <span class="gl-color" style="background: {{ palete.color }};"></span>
-            <span>
-                Palete variable <br>
-                <strong>{{ palete.varName }}</strong> <br><br>
-                Color applyed <br>
-                <strong>{{ palete.color }}</strong>
-            </span>
-        </li>
-    {% endfor %}
+	{% assign colorPalete = site.data.guideline.color_palete | sort: 'color' %}
+	{% for palete in colorPalete %}
+		<li>
+			<span class="gl-color" style="background: {{ palete.color }};"></span>
+			<span>
+				<strong>{{ palete.varName }}</strong> <br><br>
+				<em>{{ palete.color }}</em>
+			</span>
+		</li>
+	{% endfor %}
 </ul>
 <h3 class="gl">Color special</h3>
 <ul class="gl-palete-color">
-    {% assign colorSpecial = site.data.guideline.color_special | sort: 'varName' %}
-    {% for special in colorSpecial %}
-        <li>
-            <span class="gl-color" style="background: {{ special.color }}; {{ special.style }}"></span>
-            <span>
-                Palete variable <br>
-                <strong>{{ special.varName }}</strong> <br><br>
-                Color(s) applyed <br>
-                <strong>{{ special.colorsInUse }}</strong>
-            </span>
-        </li>
-    {% endfor %}
+	{% assign colorSpecial = site.data.guideline.color_special | sort: 'varName' %}
+	{% for special in colorSpecial %}
+		<li>
+			<span class="gl-color" style="background: {{ special.color }}; {{ special.style }}"></span>
+			<span>
+				<strong>{{ special.varName }}</strong> <br><br>
+				<em>{{ special.colorsInUse }}</em>
+			</span>
+		</li>
+	{% endfor %}
 </ul>
 <h3 class="gl">Color variables in use</h3>
 <ul class="gl-variables-in-use">
-    {% assign colorVars = site.data.guideline.color_vars | sort: 'color' %}
-    {% assign paleteVariable = "" %}
-    {% assign varsCollision = "" %}
-    {% for vars in colorVars %}
-        {% if paleteVariable ==  vars.color %}
-            {% if varsCollision ==  vars.varName %}
-                <li class="gl-var-name"><em class="gl-error">{{ vars.varName }}</em></li>
-            {% else %}
-                <li class="gl-var-name"><em>{{ vars.varName }}</em></li>
-            {% endif %}
-        {% else %}
-            <li class="gl-var-color"><strong>{{ vars.color }}</strong></li>
-            <li class="gl-label">Where is used</li>
-            <li class="gl-var-name"><em>{{ vars.varName }}</em></li>
-        {% endif %}
-        {% assign paleteVariable = vars.color %}
-        {% assign varsCollision = vars.varName %}
-    {% endfor %}
+	{% assign colorVars = site.data.guideline.color_vars | sort: 'color' %}
+	{% assign paleteVariable = "" %}
+	{% assign varsCollision = "" %}
+	{% for vars in colorVars %}
+		{% if paleteVariable ==  vars.color %}
+			{% if varsCollision ==  vars.varName %}
+				<li class="gl-var-name"><em class="gl-error">{{ vars.varName }}</em></li>
+			{% else %}
+				<li class="gl-var-name"><em>{{ vars.varName }}</em></li>
+			{% endif %}
+		{% else %}
+			<li class="gl-var-color"><strong>{{ vars.color }}</strong></li>
+			<li class="gl-label">Where is used</li>
+			<li class="gl-var-name"><em>{{ vars.varName }}</em></li>
+		{% endif %}
+		{% assign paleteVariable = vars.color %}
+		{% assign varsCollision = vars.varName %}
+	{% endfor %}
 </ul>
