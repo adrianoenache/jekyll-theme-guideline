@@ -29,18 +29,23 @@
     {% endfor %}
 </ul>
 <h3 class="gl">Color variables in use</h3>
-<ul class="gl-color-variables-in-use">
+<ul class="gl-variables-in-use">
     {% assign colorVars = site.data.guideline.color_vars | sort: 'color' %}
     {% assign paleteVariable = "" %}
+    {% assign varsCollision = "" %}
     {% for vars in colorVars %}
         {% if paleteVariable ==  vars.color %}
-            <li class="gl-var-name">{{ vars.varName }}</li>
+            {% if varsCollision ==  vars.varName %}
+                <li class="gl-var-name"><em class="gl-error">{{ vars.varName }}</em></li>
+            {% else %}
+                <li class="gl-var-name"><em>{{ vars.varName }}</em></li>
+            {% endif %}
         {% else %}
-            <li class="gl-label gl-highlight">Palete variable</li>
-            <li class="gl-var-color gl-highlight">{{ vars.color }}</li>
+            <li class="gl-var-color"><strong>{{ vars.color }}</strong></li>
             <li class="gl-label">Where is used</li>
-            <li class="gl-var-name">{{ vars.varName }}</li>
+            <li class="gl-var-name"><em>{{ vars.varName }}</em></li>
         {% endif %}
         {% assign paleteVariable = vars.color %}
+        {% assign varsCollision = vars.varName %}
     {% endfor %}
 </ul>

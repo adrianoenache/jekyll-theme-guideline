@@ -1,27 +1,10 @@
 ---
 ---
-// See individual.styl below. Notice it has no YAML front matter.
-
 // Cores
 {% include assets/guideline/color.html %}
-
-// Units
-$gl-h1 = 32px
-$gl-h2 = 24px
-$gl-h3 = 16px
-$gl-title-font = Times New Roman
-$gl-title-height = $gl-h1 + 16px;
-$gl-border-config = 1px solid $gl-layout-element
-$gl-border-config-10 = 10px solid $gl-layout-element
-$gl-base-radius = 5px
+// Project vars
+{% include assets/guideline/project-vars.html %}
 //
-$gl-font = "OpenSans", "sans-serif"
-$gl-code-font = monospace
-$font-icons = "icons"
-//
-
-// #########################
-
 @import 'stylus/_mixins'
 @import 'stylus/_grid'
 @import 'stylus/guideline/_colors'

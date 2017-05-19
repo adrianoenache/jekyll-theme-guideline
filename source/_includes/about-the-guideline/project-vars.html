@@ -1,0 +1,13 @@
+<h2 class="gl">Project CSS variables</h2>
+<ul class="gl-variables-in-use">
+    {% assign projetVars = site.data.guideline.project_vars | sort: 'varName' %}
+    {% assign varsCollision = "" %}
+    {% for vars in projetVars %}
+        {% if varsCollision ==  vars.varName %}
+            <li class="gl-var"><strong class="gl-error">{{ vars.varName }}</strong> = <em>{{ vars.value }}</em></li>
+        {% else %}
+            <li class="gl-var"><strong>{{ vars.varName }}</strong> = <em>{{ vars.value }}</em></li>
+        {% endif %}
+        {% assign varsCollision = vars.varName %}
+    {% endfor %}
+</ul>

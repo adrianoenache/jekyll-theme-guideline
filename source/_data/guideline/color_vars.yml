@@ -1,8 +1,4 @@
-# Color vars
-
-- varName: "$gl-bg-stage-color"
-  color: "$gl-color-gray-5"
-
+# Color variables
 - varName: "$gl-default-font-color"
   color: "$gl-color-gray-4"
 
@@ -15,11 +11,23 @@
 - varName: "$gl-a-visited"
   color: "$gl-color-base-2"
 
-- varName: "$gl-title-color"
-  color: "$gl-color-base-2"
-
 - varName: "$gl-layout-element"
   color: "$gl-color-base-2"
 
 - varName: "$gl-shadow"
   color: "$gl-color-base-2"
+
+- varName: "$gl-error"
+  color: "$gl-color-error"
+
+- varName: "$gl-char-bg"
+  color: "$gl-color-base-1"
+
+- varName: "$gl-char-color"
+  color: "$gl-color-gray-4"
+
+- varName: "$gl-char-hover-bg"
+  color: "$gl-color-gray-1"
+
+- varName: "$gl-char-hover-color"
+  color: "$gl-color-base-1"

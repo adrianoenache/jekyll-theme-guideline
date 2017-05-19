@@ -1,4 +1,4 @@
-# Color exceptions
+# Color special
 - varName: "$gl-gradient"
   color: "linear-gradient(to right, #444 0%, #888 100%)"
   colorsInUse: "#444, #888"

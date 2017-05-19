@@ -1,0 +1,39 @@
+# CSS variables in the project
+- varName: "$gl-font"
+  value: "'OpenSans', 'sans-serif'"
+
+- varName: "$gl-code-font"
+  value: "'monospace'"
+
+- varName: "$gl-font-icons"
+  value: "'icons'"
+
+- varName: "$gl-border-config"
+  value: "1px solid $gl-layout-element"
+
+- varName: "$z-index-behind"
+  value: "10"
+
+- varName: "$z-index-content"
+  value: "20"
+
+- varName: "$z-index-in-front"
+  value: "30"
+
+- varName: "$z-index-overlay"
+  value: "40"
+
+- varName: "$ease-in-back"
+  value: "cubic-bezier(0.6, -0.28, 0.74, 0.05)"
+
+- varName: "$ease-out-back"
+  value: "cubic-bezier(0.18, 0.89, 0.24, 1.65)"
+
+- varName: "$ease-in-out"
+  value: "cubic-bezier(0.4, 0.0, 0.2, 1)"
+
+- varName: "$ease-out"
+  value: "cubic-bezier(0.55, 0, 0.1, 1)"
+
+- varName: "$ease-in"
+  value: "cubic-bezier(0.4, 0.0, 1, 1)"

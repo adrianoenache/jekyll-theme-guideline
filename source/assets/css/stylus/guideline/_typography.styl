@@ -32,30 +32,33 @@ h5.gl
 
 h6.gl
 	font-size 12px
-//
+
+.gl-error
+	color $gl-error
+
 .gl-typography
 
 	&.gl-example
 		margin 0 -1px
 
 	.gl-char
-		background $gl-color-base-1
-		color $gl-color-gray-4
+		background $gl-char-bg
+		color $gl-char-color
 		cursor pointer
 		display inline-block
 		font-size 12px
 		line-height 2em
 		margin 0 1px 1px 0
 		position relative
-		transition background ease-in-out .3s, color ease-in-out .3s, transform ease-in-out .3s
+		transition background $ease-in-out .3s, color $ease-in-out .3s, transform $ease-in-out .3s
 		transform scale(1)
 		text-align center
 		vertical-align top
 		width 2em
-		z-index 0
+		z-index $z-index-behind
 
 		&:hover
-			background $gl-color-gray-1
-			color $gl-color-base-1
+			background $gl-char-hover-bg
+			color $gl-char-hover-color
 			transform scale(2)
-			z-index 1
+			z-index $z-index-content
