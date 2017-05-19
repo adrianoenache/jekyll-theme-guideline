@@ -27,18 +27,25 @@ $columns-p($qtd-column)
 $gutters($qtd-gutter)
 	$size = $gutter * $qtd-gutter
 //
-$smart = $columns(5)
-$smart-to-tablet = $columns(10) - 1px
-$tablet = $columns(10)
-$tablet-to-notebook = $columns(15) - 1px
-$notebook = $columns(15)
-$notebook-to-desktop = $columns(20) - 1px
-$desktop = $columns(20)
-$desktop-to-desktop-large = $columns(25) - 1px
-$desktop-large = $columns(25)
-$desktop-large-to-full-hd = $columns(30) - 1px
-$full-hd = $columns(30)
-
+$smart-size = $columns(5)
+$tablet-size = $columns(10)
+$notebook-size = $columns(15)
+$desktop-size = $columns(20)
+$desktop-large-size = $columns(25)
+$full-hd-size = $columns(30)
+//
+$smart = $smart-size
+$smart-to-tablet = $tablet-size - 1px
+$tablet = $tablet-size
+$tablet-to-notebook = $notebook-size - 1px
+$notebook = $notebook-size
+$notebook-to-desktop = $desktop-size - 1px
+$desktop = $desktop-size
+$desktop-to-desktop-large = $desktop-large-size - 1px
+$desktop-large = $desktop-large-size
+$desktop-large-to-full-hd = $full-hd-size - 1px
+$full-hd = $full-hd-size
+//
 // @media (min-width: $smart)
 // @media (max-width: $smart-to-tablet)
 // @media (max-width: $smart-to-tablet) and (min-width: $smart)
