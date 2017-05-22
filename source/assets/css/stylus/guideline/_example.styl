@@ -1,1 +1,154 @@
-// 
+// Exemple
+.gl-example-controls
+	font-size 0
+	position relative
+	z-index $z-index-content
+
+	> .menu, > .menu-item
+		background $gl-bt-example-controls-bg
+		color $gl-bt-example-controls-color
+		cursor pointer
+		display inline-block
+		font-size 1rem
+		transition background .3s ease, color .3s ease
+
+		&:hover
+			background $gl-bt-example-controls-hover-bg
+			color $gl-bt-example-controls-hover-color
+
+	> .menu
+		border $gl-border-config
+		// left -1px
+		line-height 1rem
+		padding 5px
+		// position absolute
+		// top -24px
+
+		&:before
+			content "+"
+
+	> .menu-item
+		line-height 15px
+		margin 0 $gutters(1) 0 0
+		padding 5px 0
+		text-align center
+		width 80px
+
+		&.background, &.comment, &.code, &.grid
+			display none
+
+.gl-example
+	border $gl-border-config
+	margin 40px -1px 20px
+	position relative
+
+	&.gl-exemple-full
+		border-left 0
+		border-right 0
+		margin 40px -14px 20px
+
+	&.menu-active
+
+		.gl-example-controls
+				background $gl-bar-example-controls-bg
+
+			.menu
+				background $gl-bt-example-controls-hover-bg
+				color $gl-bt-example-controls-hover-color
+
+				&:before
+					content "-"
+
+				&:hover
+					background $gl-bt-example-controls-bg
+					color $gl-bt-example-controls-color
+
+			.menu-item
+
+				&.background, &.comment, &.code, &.grid
+					display inline-block
+
+	&.gl-stage
+		background-color $gl-color-gray-6
+		background-image $gl-bg-stage
+		background-size 10px 10px
+		background-position 0 0, 5px 5px
+
+		.gl-example-controls
+
+			.background
+				background $gl-bt-example-controls-hover-bg
+				color $gl-bt-example-controls-hover-color
+
+				&:hover
+					background $gl-bt-example-controls-bg
+					color $gl-bt-example-controls-color
+
+	&.comment-active
+
+		.gl-example-controls
+
+			.comment
+				background $gl-bt-example-controls-hover-bg
+				color $gl-bt-example-controls-hover-color
+
+				&:hover
+					background $gl-bt-example-controls-bg
+					color $gl-bt-example-controls-color
+
+		.gl-comment
+			display block
+
+	&.code-active
+
+		.gl-example-controls
+
+			.code
+				background $gl-bt-example-controls-hover-bg
+				color $gl-bt-example-controls-hover-color
+
+				&:hover
+					background $gl-bt-example-controls-bg
+					color $gl-bt-example-controls-color
+
+		figure.highlight
+			display block
+
+	figure.highlight
+		display none
+		margin 0
+		position relative
+		z-index $z-index-content
+
+	&.gl-grid
+
+		&:after
+			background-image linear-gradient(90deg, rgba($gl-grid-strips, .10) $column, transparent $gutters(1))
+			background-size $columns(1) $gutters(1)
+			bottom 0
+			content ""
+			display block
+			left 0
+			position absolute
+			right 0
+			top 0
+			z-index $z-index-behind
+
+		.gl-example-controls
+
+			.grid
+				background $gl-color-base-1
+				color $gl-color-base-2
+
+				&:hover
+					background $gl-color-base-2
+					color $gl-color-base-1
+
+	.gl-comment
+		background $gl-example-comment-bg
+		border-top $gl-border-config
+		color $gl-example-comment-color
+		display none
+		padding 1rem
+		position relative
+		z-index $z-index-content

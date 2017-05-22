@@ -1,14 +1,10 @@
-//
-.gl-palete-color, .gl-variables-in-use
+// Palete color
+.gl-palete-color
 	$reset-list()
 	font-size 0
 
 	li
 		font-size 1rem
-
-.gl-palete-color
-
-	li
 		padding 10px
 		vertical-align top
 
@@ -24,27 +20,8 @@
 		margin 0 5px 0 0
 		width $gl-color-size
 
-.gl-variables-in-use
-
-	li
-		line-height 26px
-
-	.gl-label
-		font-size 10px
-
-	.gl-var-name
-		font-size 14px
-
-	.gl-var-color
-		font-size 20px
-		margin 26px 0 0
-
-		&:first-child
-			margin 0
-
-	.gl-var
-		font-size 14px
-		line-height 1.5em
+.gl-error
+	color $gl-error
 
 @media (min-width: $tablet)
 
@@ -53,21 +30,12 @@
 		li
 			$columns-p(3, "fluid")
 
-	.gl-variables-in-use
-		break-inside avoid
-		column-count 3
-		column-fill balance
-		column-gap 20px
-
 @media (min-width: $desktop)
 
 	.gl-palete-color
 
 		li
 			$columns-p(5, "fluid")
-
-	.gl-variables-in-use
-		column-count 4
 
 @media (min-width: $desktop-large)
 

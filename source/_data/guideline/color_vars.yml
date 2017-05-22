@@ -31,3 +31,27 @@
 
 - varName: "$gl-char-hover-color"
   color: "$gl-color-base-1"
+
+- varName: "$gl-example-comment-bg"
+  color: "$gl-color-base-1"
+
+- varName: "$gl-example-comment-color"
+  color: "$gl-color-base-2"
+
+- varName: "$gl-bar-example-controls-bg"
+  color: "$gl-color-base-2"
+
+- varName: "$gl-bt-example-controls-bg"
+  color: "$gl-color-base-2"
+
+- varName: "$gl-bt-example-controls-color"
+  color: "$gl-color-base-1"
+
+- varName: "$gl-bt-example-controls-hover-bg"
+  color: "$gl-color-base-1"
+
+- varName: "$gl-bt-example-controls-hover-color"
+  color: "$gl-color-base-2"
+
+- varName: "$gl-grid-strips"
+  color: "$gl-color-alert"
