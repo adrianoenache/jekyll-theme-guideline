@@ -55,7 +55,7 @@ verbose:  false
 defaults: []
 
 stylus:
-  compress: false
+  compress: true
   path: ./source/assets/css
 
 liquid:

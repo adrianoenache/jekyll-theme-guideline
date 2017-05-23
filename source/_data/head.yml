@@ -8,6 +8,9 @@ description: Structure to develop site using Jekyll with guideline.
 keywords: Jekyll, Jekyll theme, Guideline
 
 #
+domain: localhost:8080/
+
+#
 ogTilte: Title of my share
 ogDescription: Description of my share
 ogImgSrc: /assets/img/base-share/og.jpg

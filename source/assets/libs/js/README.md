@@ -5,3 +5,6 @@
 
 # Toggle switch class target .min.js is based on my codepen
 # http://codepen.io/adrianoenache/pen/RaZBZM
+
+# svgxuse
+# https://github.com/Keyamoon/svgxuse
