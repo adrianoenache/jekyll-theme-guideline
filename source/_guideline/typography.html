@@ -5,21 +5,4 @@ name: Verdana
 ---
 <section id="{{ page.buttontId }}" class="gl-wrapper">
 	<h1 class="gl">{{ page.name }}</h1>
-	<p class="gl-example gl-typography gl-typography-verdana" data-gl="{{ site.data.guideline.typography.labels[0] }}">
-		{% for number in site.data.guideline.typography.numbers %}
-			<span class="gl-char" data-char="{{ number }}">{{ number }}</span>
-		{% endfor %}
-		{% for symbol in site.data.guideline.typography.symbols %}
-			<span class="gl-char" data-char="{{ symbol }}">{{ symbol }}</span>
-		{% endfor %}
-	</p>
-	<p class="gl-example gl-typography gl-typography-verdana" data-gl="{{ site.data.guideline.typography.labels[1] }}">
-		{% for character in site.data.guideline.typography.characters %}
-			<span data-char="{{ character }}">{{ character }}-{{ character | upcase }}</span>
-		{% endfor %}
-		{% for accent in site.data.guideline.typography.accents %}
-			<span data-char="{{ accent }}">{{ accent }}-{{ accent | upcase }}</span>
-		{% endfor %}
-	</p>
-	<p class="gl-comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, obcaecati cupiditate tenetur dolorum vel, quos laboriosam consequuntur sunt deleniti praesentium dignissimos laudantium optio amet temporibus distinctio inventore tempore iusto, modi.</p>
 </section>
