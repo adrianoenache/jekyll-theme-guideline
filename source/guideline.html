@@ -1,13 +1,12 @@
 ---
-#
-# You don't need to edit this file, it's empty on purpose.
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-#
 layout: guideline
 title: Guideline
 ---
 <button type="button" data-plugin="toggle-class-target" data-class="gl-nav-active" data-target="html" class="gl-menu">Guideline</button>
 <nav class="gl-nav">
+	<button class="gl-link active" type="button" data-plugin="toggle-class-target" data-class="active" data-target="#about-the-guideline">
+		<span data-plugin="toggle-class-target" data-flag="_parents" data-target=".gl-link" data-class="active">About the guideline</span>
+	</button>
 {% assign navItens = site.guideline | sort: 'orderInMenu' %}
 {% for nav in navItens %}
 	<button class="gl-link {{ nav.status }}" type="button" data-plugin="toggle-class-target" data-class="active" data-target="#{{ nav.buttontId }}">
@@ -15,6 +14,12 @@ title: Guideline
 	</button>
 {% endfor %}
 </nav>
+<section id="about-the-guideline" class="gl-wrapper active">
+	<h1 class="gl">About the guideline</h1>
+	{% for about-guideline in site.about-the-guideline %}
+		{{ about-guideline.content }}
+	{% endfor %}
+</section>
 {% for guideline in site.guideline %}
 	{{ guideline.content }}
 {% endfor %}

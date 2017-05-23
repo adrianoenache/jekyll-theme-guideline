@@ -1,3 +1,5 @@
+---
+---
 <h2 class="gl">Typography</h2>
 {% assign typography = site.data.guideline.fonts %}
 {% assign fontFamily = "" %}
@@ -48,24 +50,7 @@
 
 <h3 class="gl">Example</h3>
 <div class="gl-example">
-	<div class="gl-example-controls">
-		<button class="gl gl-bt-comment" data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-comment-active">
-			<svg class="gl-icon gl-icon-comment"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-comment"></use></svg>
-		</button>
-		<button class="gl gl-bt-code" data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-code-active">
-			<svg class="gl-icon gl-icon-code"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-code"></use></svg>
-		</button>
-		<button class="gl gl-bt-stage" data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-stage-active">
-			<span class="gl-icon">B</span>
-		</button>
-		<button class="gl gl-bt-grid " data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-grid-active">
-			<svg class="gl-icon gl-icon-grid"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-grid"></use></svg>
-		</button>
-		<button class="gl gl-bt-more" type="button" data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-more-active">
-			<svg class="gl-icon gl-icon-plus"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-plus"></use></svg>
-			<svg class="gl-icon gl-icon-minus"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-minus"></use></svg>
-		</button>
-	</div>
+	{% include guideline/gl-example-controls.html %}
 	<button type="button">Lorem</button>
 {% highlight html linenos %}
 <button type="button">Lorem</button>
@@ -76,24 +61,7 @@
 </div>
 <h3 class="gl">Example full</h3>
 <div class="gl-example gl-exemple-full">
-	<div class="gl-example-controls">
-		<button class="gl gl-bt-comment" data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-comment-active">
-			<svg class="gl-icon gl-icon-comment"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-comment"></use></svg>
-		</button>
-		<button class="gl gl-bt-code" data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-code-active">
-			<svg class="gl-icon gl-icon-code"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-code"></use></svg>
-		</button>
-		<button class="gl gl-bt-stage" data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-stage-active">
-			<span class="gl-icon">B</span>
-		</button>
-		<button class="gl gl-bt-grid " data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-grid-active">
-			<svg class="gl-icon gl-icon-grid"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-grid"></use></svg>
-		</button>
-		<button class="gl gl-bt-more" type="button" data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-more-active">
-			<svg class="gl-icon gl-icon-plus"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-plus"></use></svg>
-			<svg class="gl-icon gl-icon-minus"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-minus"></use></svg>
-		</button>
-	</div>
+	{% include guideline/gl-example-controls.html %}
 	<h1 class="gl">H1 Lorem ipsum dolor sit amet.</h1>
 {% highlight html linenos %}
 <h1 class="gl">H1 Lorem ipsum dolor sit amet.</h1>

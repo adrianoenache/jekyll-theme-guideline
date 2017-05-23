@@ -1,0 +1,26 @@
+<div class="gl-example-controls">
+{% if include.gl-bt-comment != false %}
+	<button class="gl gl-bt-comment" data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-comment-active">
+		<svg class="gl-icon gl-icon-comment"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-comment"></use></svg>
+	</button>
+{% endif %}
+{% if include.gl-bt-code != false %}
+	<button class="gl gl-bt-code" data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-code-active">
+		<svg class="gl-icon gl-icon-code"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-code"></use></svg>
+	</button>
+{% endif %}
+{% if include.gl-bt-background != false %}
+	<button class="gl gl-bt-stage" data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-stage-active">
+		<span class="gl-icon"></span>
+	</button>
+{% endif %}
+{% if include.gl-bt-grid != false %}
+	<button class="gl gl-bt-grid " data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-grid-active">
+		<svg class="gl-icon gl-icon-grid"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-grid"></use></svg>
+	</button>
+{% endif %}
+	<button class="gl gl-bt-more" type="button" data-plugin="toggle-class-target" data-target=".gl-example" data-flag="_parents" data-class="gl-more-active">
+		<svg class="gl-icon gl-icon-plus"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-plus"></use></svg>
+		<svg class="gl-icon gl-icon-minus"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-minus"></use></svg>
+	</button>
+</div>

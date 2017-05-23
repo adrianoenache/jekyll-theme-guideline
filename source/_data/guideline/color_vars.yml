@@ -58,3 +58,6 @@
 
 - varName: "$gl-grid-strips"
   color: "$gl-color-alert"
+
+- varName: "$gl-example-bg"
+  color: "$gl-color-gray-6"

@@ -9,9 +9,12 @@ layouts_dir:  ./source/_layouts
 plugins_dir:  ./source/_plugins
 
 collections:
+  about-the-guideline:
+    output: false
+  guideline:
+    output: false
 #  posts:
 #    output:   true
-  guideline:
 
 # Handling Reading
 safe:                 false
