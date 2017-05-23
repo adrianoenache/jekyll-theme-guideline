@@ -1,4 +1,7 @@
 # Color variables
+- varName: "$gl-page-bg"
+  color: "$gl-color-gray-6"
+
 - varName: "$gl-default-font-color"
   color: "$gl-color-gray-4"
 
