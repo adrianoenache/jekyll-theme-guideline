@@ -16,7 +16,8 @@ title: Guideline
 </nav>
 <section id="about-the-guideline" class="gl-wrapper active">
 	<h1 class="gl">About the guideline</h1>
-	{% for about-guideline in site.about-the-guideline %}
+	{% assign aboutGuideline = site.about-the-guideline | sort: 'order' %}
+	{% for about-guideline in aboutGuideline %}
 		{{ about-guideline.content }}
 	{% endfor %}
 </section>

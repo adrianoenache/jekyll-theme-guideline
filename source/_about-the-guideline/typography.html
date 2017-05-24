@@ -1,4 +1,5 @@
 ---
+order: 4
 ---
 <h2 class="gl">Typography</h2>
 {% assign typography = site.data.guideline.fonts %}
@@ -38,7 +39,6 @@
 {% endfor %}
 <h3 class="gl">Titles</h3>
 <p class="gl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta laboriosam quisquam, beatae blanditiis rem, fuga, perferendis repellendus architecto, eius voluptatum accusantium officia obcaecati veniam! Vero odio incidunt dolore ut, suscipit!</p>
-
 {% highlight html linenos %}
 <h1 class="gl">H1 Lorem ipsum dolor sit amet.</h1>
 <h2 class="gl">H2 Lorem ipsum dolor sit amet.</h2>
@@ -47,35 +47,3 @@
 <h5 class="gl">H5 Lorem ipsum dolor sit amet.</h5>
 <h6 class="gl">H6 Lorem ipsum dolor sit amet.</h6>
 {% endhighlight %}
-
-<h3 class="gl">Example</h3>
-<div class="gl-example">
-	{% include guideline/gl-example-controls.html %}
-	<button type="button">Lorem</button>
-{% highlight html linenos %}
-<button type="button">Lorem</button>
-{% endhighlight %}
-	<div class="gl-comment">
-		<p class="gl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quia dolore vel praesentium unde rerum perferendis tempora assumenda est officia, dolorem id magnam blanditiis repellendus debitis aliquid atque alias ad.</p>
-	</div>
-</div>
-<h3 class="gl">Example full</h3>
-<div class="gl-example gl-exemple-full">
-	{% include guideline/gl-example-controls.html %}
-	<h1 class="gl">H1 Lorem ipsum dolor sit amet.</h1>
-{% highlight html linenos %}
-<h1 class="gl">H1 Lorem ipsum dolor sit amet.</h1>
-{% endhighlight %}
-	<div class="gl-comment">
-		<p class="gl">Lorem ipsum dolor sit amet</p>
-		<p class="gl">Lorem ipsum dolor sit amet</p>
-	</div>
-</div>
-
-<p class="gl">
-	<svg class="gl-icon gl-icon-comment"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-comment"></use></svg>
-	<svg class="gl-icon gl-icon-plus"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-plus"></use></svg>
-	<svg class="gl-icon gl-icon-minus"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-minus"></use></svg>
-	<svg class="gl-icon gl-icon-grid"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-grid"></use></svg>
-	<svg class="gl-icon gl-icon-code"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-code"></use></svg>
-</p>
