@@ -2,40 +2,29 @@
 order: 4
 ---
 <h2 class="gl">Typography</h2>
-{% assign typography = site.data.guideline.fonts %}
-{% assign fontFamily = "" %}
-{% assign fontWeight = "" %}
-{% for font in typography %}
-	{% if fontFamily !=  font.family %}
-		<h3 class="gl">{{ font.family }}</h3>
-	{% endif %}
-	{% if fontWeight !=  font.weight %}
-		<h4 class="gl">Font-weight {{ font.weight }}</h4>
-		<p class="gl-typography" style="font-family: {{ font.family }}; font-weight: {{ font.weight }}">
-			{% for character in site.data.guideline.typography.characters %}
-				<span class="gl-char" style="font-style: normal;">{{ character }}</span>
-				<span class="gl-char" style="font-style: italic;">{{ character }}</span>
-				<span class="gl-char" style="font-style: normal;">{{ character | upcase }}</span>
-				<span class="gl-char" style="font-style: italic;">{{ character | upcase }}</span>
-			{% endfor %}
-			{% for accent in site.data.guideline.typography.accents %}
-				<span class="gl-char" style="font-style: normal;">{{ accent }}</span>
-				<span class="gl-char" style="font-style: italic;">{{ accent }}</span>
-				<span class="gl-char" style="font-style: normal;">{{ accent | upcase }}</span>
-				<span class="gl-char" style="font-style: italic;">{{ accent | upcase }}</span>
-			{% endfor %}
-			{% for number in site.data.guideline.typography.numbers %}
-				<span class="gl-char" style="font-style: normal;">{{ number }}</span>
-				<span class="gl-char" style="font-style: italic;">{{ number }}</span>
-			{% endfor %}
-			{% for symbol in site.data.guideline.typography.symbols %}
-				<span class="gl-char" style="font-style: normal;">{{ symbol }}</span>
-				<span class="gl-char" style="font-style: italic;">{{ symbol }}</span>
-			{% endfor %}
-		</p>
-	{% endif %}
-	{% assign fontFamily = font.family %}
-	{% assign fontWeight = font.weight %}
+{% for font in site.data.guideline.fonts %}
+	<h3 class="gl">{{ font.family }}</h3>
+	{% for style in font.style %}
+		{% for weight in style.weight %}
+			<h4 class="gl" style="font-family: {{ font.family }}; font-style: {{ style.s }}; font-weight: {{ weight.w }}">Font style {{ style.s }} weight {{ weight.w }}</h4>
+			<p class="gl-typography" style="font-family: {{ font.family }}; font-style: {{ style.s }}; font-weight: {{ weight.w }}">
+				{% for character in site.data.guideline.typography.characters %}
+					<span class="gl-char">{{ character }}</span>
+					<span class="gl-char">{{ character | upcase }}</span>
+				{% endfor %}
+				{% for accent in site.data.guideline.typography.accents %}
+					<span class="gl-char">{{ accent }}</span>
+					<span class="gl-char">{{ accent | upcase }}</span>
+				{% endfor %}
+				{% for number in site.data.guideline.typography.numbers %}
+					<span class="gl-char">{{ number }}</span>
+				{% endfor %}
+				{% for symbol in site.data.guideline.typography.symbols %}
+					<span class="gl-char">{{ symbol }}</span>
+				{% endfor %}
+			</p>
+		{% endfor %}
+	{% endfor %}
 {% endfor %}
 <h3 class="gl">Titles</h3>
 <p class="gl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta laboriosam quisquam, beatae blanditiis rem, fuga, perferendis repellendus architecto, eius voluptatum accusantium officia obcaecati veniam! Vero odio incidunt dolore ut, suscipit!</p>

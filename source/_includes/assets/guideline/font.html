@@ -1,8 +1,12 @@
 {% for font in site.data.guideline.fonts %}
+	{% for style in font.style %}
+		{% for weight in style.weight %}
 @font-face {
 	font-family: "{{ font.family }}";
-	src: {% for src in font.url %} {{ src.path }} {% endfor %}
-	font-weight: {{ font.weight }};
-	font-style: {{ font.style }};
+	src: {% for src in weight.url %} {{ src.path }} {% endfor %}
+	font-weight: {{ weight.w }};
+	font-style: {{ style.s }};
 }
-{% endfor %}
+		{% endfor %}
+	{% endfor %}
+{% endfor %}s

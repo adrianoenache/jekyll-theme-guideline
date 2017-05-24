@@ -1,90 +1,69 @@
 # Fonts
 - family: "OpenSans"
-  style: "normal"
-  weight: "300"
-  url:
-    - path: "url('/assets/fonts/guideline/opensans-light.woff2') format('woff2'),"
-    - path: "url('/assets/fonts/guideline/opensans-light.woff') format('woff'),"
-    - path: "url('/assets/fonts/guideline/opensans-light.ttf') format('truetype'),"
-    - path: "url('/assets/fonts/guideline/opensans-light.eot') format('eot');"
+  style:
+    - s: "normal"
+      weight:
+        - w: "300"
+          url:
+            - path: "url('/assets/fonts/guideline/opensans-light.woff2') format('woff2'),"
+            - path: "url('/assets/fonts/guideline/opensans-light.woff') format('woff'),"
+            - path: "url('/assets/fonts/guideline/opensans-light.ttf') format('truetype'),"
+            - path: "url('/assets/fonts/guideline/opensans-light.eot') format('eot');"
+        - w: "400"
+          url:
+            - path: "url('/assets/fonts/guideline/opensans-regular.woff2') format('woff2'),"
+            - path: "url('/assets/fonts/guideline/opensans-regular.woff') format('woff'),"
+            - path: "url('/assets/fonts/guideline/opensans-regular.ttf') format('truetype'),"
+            - path: "url('/assets/fonts/guideline/opensans-regular.eot') format('eot');"
+        - w: "600"
+          url:
+            - path: "url('/assets/fonts/guideline/opensans-semibold.woff2') format('woff2'),"
+            - path: "url('/assets/fonts/guideline/opensans-semibold.woff') format('woff'),"
+            - path: "url('/assets/fonts/guideline/opensans-semibold.ttf') format('truetype'),"
+            - path: "url('/assets/fonts/guideline/opensans-semibold.eot') format('eot');"
+        - w: "700"
+          url:
+            - path: "url('/assets/fonts/guideline/opensans-bold.woff2') format('woff2'),"
+            - path: "url('/assets/fonts/guideline/opensans-bold.woff') format('woff'),"
+            - path: "url('/assets/fonts/guideline/opensans-bold.ttf') format('truetype'),"
+            - path: "url('/assets/fonts/guideline/opensans-bold.eot') format('eot');"
+        - w: "800"
+          url:
+            - path: "url('/assets/fonts/guideline/opensans-extrabold.woff2') format('woff2'),"
+            - path: "url('/assets/fonts/guideline/opensans-extrabold.woff') format('woff'),"
+            - path: "url('/assets/fonts/guideline/opensans-extrabold.ttf') format('truetype'),"
+            - path: "url('/assets/fonts/guideline/opensans-extrabold.eot') format('eot');"
 
-- family: "OpenSans"
-  style: "italic"
-  weight: "300"
-  url:
-    - path: "url('/assets/fonts/guideline/opensans-lightitalic.woff2') format('woff2'),"
-    - path: "url('/assets/fonts/guideline/opensans-lightitalic.woff') format('woff'),"
-    - path: "url('/assets/fonts/guideline/opensans-lightitalic.ttf') format('truetype'),"
-    - path: "url('/assets/fonts/guideline/opensans-lightitalic.eot') format('eot');"
-
-- family: "OpenSans"
-  style: "normal"
-  weight: "400"
-  url:
-    - path: "url('/assets/fonts/guideline/opensans-regular.woff2') format('woff2'),"
-    - path: "url('/assets/fonts/guideline/opensans-regular.woff') format('woff'),"
-    - path: "url('/assets/fonts/guideline/opensans-regular.ttf') format('truetype'),"
-    - path: "url('/assets/fonts/guideline/opensans-regular.eot') format('eot');"
-
-- family: "OpenSans"
-  style: "italic"
-  weight: "400"
-  url:
-    - path: "url('/assets/fonts/guideline/opensans-italic.woff2') format('woff2'),"
-    - path: "url('/assets/fonts/guideline/opensans-italic.woff') format('woff'),"
-    - path: "url('/assets/fonts/guideline/opensans-italic.ttf') format('truetype'),"
-    - path: "url('/assets/fonts/guideline/opensans-italic.eot') format('eot');"
-
-- family: "OpenSans"
-  style: "normal"
-  weight: "600"
-  url:
-    - path: "url('/assets/fonts/guideline/opensans-semibold.woff2') format('woff2'),"
-    - path: "url('/assets/fonts/guideline/opensans-semibold.woff') format('woff'),"
-    - path: "url('/assets/fonts/guideline/opensans-semibold.ttf') format('truetype'),"
-    - path: "url('/assets/fonts/guideline/opensans-semibold.eot') format('eot');"
-
-- family: "OpenSans"
-  style: "italic"
-  weight: "600"
-  url:
-    - path: "url('/assets/fonts/guideline/opensans-semibolditalic.woff2') format('woff2'),"
-    - path: "url('/assets/fonts/guideline/opensans-semibolditalic.woff') format('woff'),"
-    - path: "url('/assets/fonts/guideline/opensans-semibolditalic.ttf') format('truetype'),"
-    - path: "url('/assets/fonts/guideline/opensans-semibolditalic.eot') format('eot');"
-
-- family: "OpenSans"
-  style: "normal"
-  weight: "700"
-  url:
-    - path: "url('/assets/fonts/guideline/opensans-bold.woff2') format('woff2'),"
-    - path: "url('/assets/fonts/guideline/opensans-bold.woff') format('woff'),"
-    - path: "url('/assets/fonts/guideline/opensans-bold.ttf') format('truetype'),"
-    - path: "url('/assets/fonts/guideline/opensans-bold.eot') format('eot');"
-
-- family: "OpenSans"
-  style: "italic"
-  weight: "700"
-  url:
-    - path: "url('/assets/fonts/guideline/opensans-bolditalic.woff2') format('woff2'),"
-    - path: "url('/assets/fonts/guideline/opensans-bolditalic.woff') format('woff'),"
-    - path: "url('/assets/fonts/guideline/opensans-bolditalic.ttf') format('truetype'),"
-    - path: "url('/assets/fonts/guideline/opensans-bolditalic.eot') format('eot');"
-
-- family: "OpenSans"
-  style: "normal"
-  weight: "800"
-  url:
-    - path: "url('/assets/fonts/guideline/opensans-extrabold.woff2') format('woff2'),"
-    - path: "url('/assets/fonts/guideline/opensans-extrabold.woff') format('woff'),"
-    - path: "url('/assets/fonts/guideline/opensans-extrabold.ttf') format('truetype'),"
-    - path: "url('/assets/fonts/guideline/opensans-extrabold.eot') format('eot');"
-
-- family: "OpenSans"
-  style: "italic"
-  weight: "800"
-  url:
-    - path: "url('/assets/fonts/guideline/opensans-extrabolditalic.woff2') format('woff2'),"
-    - path: "url('/assets/fonts/guideline/opensans-extrabolditalic.woff') format('woff'),"
-    - path: "url('/assets/fonts/guideline/opensans-extrabolditalic.ttf') format('truetype'),"
-    - path: "url('/assets/fonts/guideline/opensans-extrabolditalic.eot') format('eot');"
+    - s: "italic"
+      weight:
+        - w: "300"
+          url:
+            - path: "url('/assets/fonts/guideline/opensans-lightitalic.woff2') format('woff2'),"
+            - path: "url('/assets/fonts/guideline/opensans-lightitalic.woff') format('woff'),"
+            - path: "url('/assets/fonts/guideline/opensans-lightitalic.ttf') format('truetype'),"
+            - path: "url('/assets/fonts/guideline/opensans-lightitalic.eot') format('eot');"
+        - w: "400"
+          weight: "400"
+          url:
+            - path: "url('/assets/fonts/guideline/opensans-italic.woff2') format('woff2'),"
+            - path: "url('/assets/fonts/guideline/opensans-italic.woff') format('woff'),"
+            - path: "url('/assets/fonts/guideline/opensans-italic.ttf') format('truetype'),"
+            - path: "url('/assets/fonts/guideline/opensans-italic.eot') format('eot');"
+        - w: "600"
+          url:
+            - path: "url('/assets/fonts/guideline/opensans-semibolditalic.woff2') format('woff2'),"
+            - path: "url('/assets/fonts/guideline/opensans-semibolditalic.woff') format('woff'),"
+            - path: "url('/assets/fonts/guideline/opensans-semibolditalic.ttf') format('truetype'),"
+            - path: "url('/assets/fonts/guideline/opensans-semibolditalic.eot') format('eot');"
+        - w: "700"
+          url:
+            - path: "url('/assets/fonts/guideline/opensans-bolditalic.woff2') format('woff2'),"
+            - path: "url('/assets/fonts/guideline/opensans-bolditalic.woff') format('woff'),"
+            - path: "url('/assets/fonts/guideline/opensans-bolditalic.ttf') format('truetype'),"
+            - path: "url('/assets/fonts/guideline/opensans-bolditalic.eot') format('eot');"
+        - w: "800"
+          url:
+            - path: "url('/assets/fonts/guideline/opensans-extrabolditalic.woff2') format('woff2'),"
+            - path: "url('/assets/fonts/guideline/opensans-extrabolditalic.woff') format('woff'),"
+            - path: "url('/assets/fonts/guideline/opensans-extrabolditalic.ttf') format('truetype'),"
+            - path: "url('/assets/fonts/guideline/opensans-extrabolditalic.eot') format('eot');"
