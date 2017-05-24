@@ -1,4 +1,84 @@
 // Exemple
+button.gl
+	$reset-button()
+	$gl-button-size = 30px
+	background $gl-bt-example-controls-bg
+	border $gl-border-config
+	color $gl-bt-example-controls-color
+	display inline-block
+	font-size 20px
+	height $gl-button-size
+	overflow hidden
+	position relative
+	transition background .3s $ease-in-out, color .3s $ease-in-out
+	vertical-align middle
+	width $gl-button-size
+
+	span
+		display block
+		height 100%
+		width 100%
+
+	&:hover
+		background $gl-bt-example-controls-hover-bg
+		color $gl-bt-example-controls-hover-color
+
+	&.gl-bt-comment, &.gl-bt-code, &.gl-bt-stage, &.gl-bt-grid
+		display none
+
+	.gl-icon
+		$center()
+
+	&.gl-bt-more
+
+		.gl-icon-plus, .gl-icon-minus
+			transition opacity .3s $ease-in-out
+
+		.gl-icon-plus
+			opacity 1
+
+		.gl-icon-minus
+			opacity 0
+
+		&.gl-active
+
+			.gl-icon-plus
+				opacity 0
+
+			.gl-icon-minus
+				opacity 1
+
+	&.gl-bt-stage
+
+		.gl-icon
+			$size = 22px
+			height $size
+			width $size
+
+			&:before, &:after
+				$size = 15px
+				border $gl-border-config
+				content ""
+				display inline-block
+				height $size
+				position absolute
+				width $size
+
+			&:before
+				background $gl-example-bg
+				left 0
+				top 0
+				z-index $z-index-content + 1
+
+			&:after
+				background-color $gl-example-bg
+				background-image $gl-bg-stage
+				background-size 10px 10px
+				background-position 0 0, 5px 5px
+				bottom 0
+				right 0
+				z-index $z-index-content
+
 .gl-example-controls
 	background $gl-bar-example-controls-bg
 	border $gl-border-config
@@ -11,68 +91,7 @@
 	z-index $z-index-content
 
 	button.gl
-		$reset-button()
-		$gl-button-size = 30px
-		background $gl-bt-example-controls-bg
-		color $gl-bt-example-controls-color
-		display inline-block
-		font-size 20px
-		height $gl-button-size
-		position relative
-		transition background .3s $ease-in-out, color .3s $ease-in-out
-		width $gl-button-size
-
-		&:hover
-			background $gl-bt-example-controls-hover-bg
-			color $gl-bt-example-controls-hover-color
-
-		&.gl-bt-comment, &.gl-bt-code, &.gl-bt-stage, &.gl-bt-grid
-			display none
-
-		.gl-icon
-			$center()
-
-		&.gl-bt-more
-
-			.gl-icon-plus, .gl-icon-minus
-				transition opacity .3s $ease-in-out
-
-			.gl-icon-plus
-				opacity 1
-
-			.gl-icon-minus
-				opacity 0
-
-		&.gl-bt-stage
-
-			.gl-icon
-				$size = 22px
-				height $size
-				width $size
-
-				&:before, &:after
-					$size = 15px
-					border $gl-border-config
-					content ""
-					display inline-block
-					height $size
-					position absolute
-					width $size
-
-				&:before
-					background $gl-example-bg
-					left 0
-					top 0
-					z-index $z-index-content + 1
-
-				&:after
-					background-color $gl-example-bg
-					background-image $gl-bg-stage
-					background-size 10px 10px
-					background-position 0 0, 5px 5px
-					bottom 0
-					right 0
-					z-index $z-index-content
+		border 0
 
 .gl-example
 	background $gl-example-bg
