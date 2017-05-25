@@ -51,18 +51,6 @@ button.gl
 			.gl-icon-minus
 				opacity 1
 
-	&.gl-main-bt
-
-		.gl-wrapper-icon
-			height 2em
-			position absolute
-			right 0
-			top 0
-			width 2em
-
-			.gl-icon
-				font-size 1.5em
-
 	&.gl-link
 		box-sizing border-box
 		display block
@@ -72,9 +60,6 @@ button.gl
 		text-align left
 		width 100%
 
-		&.gl-main-bt
-			width 214px
-
 		span
 			border 0
 			padding 0 1em
@@ -82,12 +67,46 @@ button.gl
 	.gl-icon
 		$center()
 
+	&.gl-main-bt
+		transition width .3s $ease-in-out
+		width 216px
+
+		&:hover
+			width 232px
+
+		.gl-wrapper-icon
+			height 2em
+			position absolute
+			right 0
+			top 0
+			width 2em
+
+			.gl-icon-menu
+				font-size 1.5em
+
+		.gl-icon-menu, .gl-icon-close
+			transition opacity .3s $ease-in-out
+
+		.gl-icon-menu
+			opacity 1
+
+		.gl-icon-close
+			opacity 0
+
+		&.gl-active
+
+			.gl-icon-menu
+				opacity 0
+
+			.gl-icon-close
+				opacity 1
+
 .gl-wrapper-nav
 	background-color $gl-page-bg
 	background-image $gl-bg-stage
 	background-size 10px 10px
 	background-position 0 0, 5px 5px
-	bottom 0
+	height 100%
 	left -200px
 	position fixed
 	top 0
@@ -96,21 +115,19 @@ button.gl
 	z-index $z-index-in-front
 
 	.gl-nav
+		height 100%
 		overflow-y auto
 
 :root
-	padding $gutters(3) $gutters(1) $gutters(1)
-	transition padding .2s ease
+	padding $gutters(1)
 
 	&.gl-nav-active
-		padding $gutters(3) $gutters(1) $gutters(1) (200px + $gutters(1))
+
+		.gl-main-bt
+			width 200px
+
+			&:hover
+				width 200px
 
 		.gl-wrapper-nav
 			left 0
-
-.gl-wrapper
-	display none
-	margin 0 0 10px
-
-	&.active
-		display block
