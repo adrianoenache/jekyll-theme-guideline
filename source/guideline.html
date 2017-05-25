@@ -2,18 +2,28 @@
 layout: guideline
 title: Guideline
 ---
-<button type="button" data-plugin="toggle-class-target" data-class="gl-nav-active" data-target="html" class="gl-menu">Guideline</button>
-<nav class="gl-nav">
-	<button class="gl-link active" type="button" data-plugin="toggle-class-target" data-class="active" data-target="#about-the-guideline">
-		<span data-plugin="toggle-class-target" data-flag="_parents" data-target=".gl-link" data-class="active">About the guideline</span>
+<div class="gl-wrapper-nav">
+	<button class="gl gl-link gl-main-bt gl-active" type="button" data-plugin="toggle-class-target" data-class="gl-nav-active" data-target="html">
+		<span data-plugin="toggle-class-target" data-flag="_parents" data-target=".gl-link" data-class="gl-active">
+			Guideline
+			<span class="gl-wrapper-icon">
+				<svg class="gl-icon gl-icon-menu"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-menu"></use></svg>
+				<svg class="gl-icon gl-icon-close"><use xlink:href="/assets/img/svg/guideline/gl-example-controls.svg#icon-close"></use></svg>
+			</span>
+		</span>
 	</button>
-{% assign navItens = site.guideline | sort: 'orderInMenu' %}
-{% for nav in navItens %}
-	<button class="gl-link {{ nav.status }}" type="button" data-plugin="toggle-class-target" data-class="active" data-target="#{{ nav.buttontId }}">
-		<span data-plugin="toggle-class-target" data-flag="_parents" data-target=".gl-link" data-class="active">{{ nav.name }}</span>
-	</button>
-{% endfor %}
-</nav>
+	<nav class="gl-nav">
+		<button class="gl gl-link gl-active"  type="button" data-plugin="toggle-class-target" data-class="active" data-target="#about-the-guideline">
+			<span data-plugin="toggle-class-target" data-flag="_parents" data-target=".gl-link" data-class="gl-active">About the guideline</span>
+		</button>
+	{% assign navItens = site.guideline | sort: 'orderInMenu' %}
+	{% for nav in navItens %}
+		<button class="gl gl-link {{ nav.status }}" type="button" data-plugin="toggle-class-target" data-class="active" data-target="#{{ nav.buttontId }}">
+			<span data-plugin="toggle-class-target" data-flag="_parents" data-target=".gl-link" data-class="gl-active">{{ nav.name }}</span>
+		</button>
+	{% endfor %}
+	</nav>
+</div>
 <section id="about-the-guideline" class="gl-wrapper active">
 	<h1 class="gl">About the guideline</h1>
 	{% assign aboutGuideline = site.about-the-guideline | sort: 'order' %}

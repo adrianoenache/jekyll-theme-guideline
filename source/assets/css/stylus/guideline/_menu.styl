@@ -1,1 +1,116 @@
-// 
+// Base button and guideline menu
+button.gl
+	$reset-button()
+	$gl-button-size = 30px
+	background $gl-bt-example-controls-bg
+	color $gl-bt-example-controls-color
+	display inline-block
+	font-size 20px
+	height $gl-button-size
+	overflow hidden
+	position relative
+	transition background .3s $ease-in-out, color .3s $ease-in-out
+	vertical-align middle
+	width $gl-button-size
+
+	span
+		border $gl-border-config
+		box-sizing border-box
+		display block
+		height 100%
+		width 100%
+
+	&:hover
+		background $gl-bt-example-controls-hover-bg
+		color $gl-bt-example-controls-hover-color
+
+	&.gl-active
+		background $gl-bt-example-controls-hover-bg
+		color $gl-bt-example-controls-hover-color
+
+		&:hover
+			background $gl-bt-example-controls-bg
+			color $gl-bt-example-controls-color
+
+	&.gl-bt-more
+
+		.gl-icon-plus, .gl-icon-minus
+			transition opacity .3s $ease-in-out
+
+		.gl-icon-plus
+			opacity 1
+
+		.gl-icon-minus
+			opacity 0
+
+		&.gl-active
+
+			.gl-icon-plus
+				opacity 0
+
+			.gl-icon-minus
+				opacity 1
+
+	&.gl-main-bt
+
+		.gl-wrapper-icon
+			height 2em
+			position absolute
+			right 0
+			top 0
+			width 2em
+
+			.gl-icon
+				font-size 1.5em
+
+	&.gl-link
+		box-sizing border-box
+		display block
+		font-size 16px
+		height auto
+		line-height 2em
+		text-align left
+		width 100%
+
+		&.gl-main-bt
+			width 214px
+
+		span
+			border 0
+			padding 0 1em
+
+	.gl-icon
+		$center()
+
+.gl-wrapper-nav
+	background-color $gl-page-bg
+	background-image $gl-bg-stage
+	background-size 10px 10px
+	background-position 0 0, 5px 5px
+	bottom 0
+	left -200px
+	position fixed
+	top 0
+	transition left .2s ease
+	width 200px
+	z-index $z-index-in-front
+
+	.gl-nav
+		overflow-y auto
+
+:root
+	padding $gutters(3) $gutters(1) $gutters(1)
+	transition padding .2s ease
+
+	&.gl-nav-active
+		padding $gutters(3) $gutters(1) $gutters(1) (200px + $gutters(1))
+
+		.gl-wrapper-nav
+			left 0
+
+.gl-wrapper
+	display none
+	margin 0 0 10px
+
+	&.active
+		display block

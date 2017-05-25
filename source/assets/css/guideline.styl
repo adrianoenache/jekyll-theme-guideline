@@ -11,6 +11,7 @@
 @import 'stylus/guideline/_variables-in-use'
 @import 'stylus/guideline/_typography'
 @import 'stylus/guideline/_code-highlight'
+@import 'stylus/guideline/_menu'
 @import 'stylus/guideline/_example'
 
 .gl-hide
@@ -18,109 +19,6 @@
 
 .gl-icon
 	$icon()
-
-:root
-	padding $gutters(3) $gutters(1) $gutters(1)
-	transition padding .2s ease
-
-	&.gl-nav-active
-		padding $gutters(3) $gutters(1) $gutters(1) (200px + $gutters(1))
-
-		.gl-menu
-			background $gl-color-base-1
-			color $gl-color-base-2
-			left 200px + $gutters(1)
-
-			&:hover
-				background $gl-color-base-2
-				color $gl-color-base-1
-
-		.gl-nav
-			left 0
-
-// #########################
-
-// .gl-colors, .gl-typography, .gl-typography-icons, .gl-gs-example, .gl-nav
-// 	font-size 0
-
-// .gl-colors > span, .gl-typography-icons > span, .gl-example:before, .gl-comment, .gl-example > .menu, .gl-example > .menu-item, .gl-link, .gl-menu
-// 	font-size 1rem
-
-.gl-wrapper
-	display none
-	margin 0 0 10px
-
-	&.active
-		display block
-
-.gl-menu, .gl-link
-	background $gl-color-base-2
-	border 0
-	color $gl-color-base-1
-	line-height 2rem
-	outline none
-
-	&:hover
-		background $gl-color-base-1
-		color $gl-color-base-2
-
-// #########################
-
-.gl-menu
-	border solid 1px $gl-color-base-2
-	position fixed
-	left $gutters(1)
-	top 0
-	transition background .3s ease, color .3s ease, left .2s ease
-	z-index 9999
-
-// #########################
-
-.gl-nav
-	background-color $gl-color-gray-6
-	background-image $gl-bg-stage
-	background-size 10px 10px
-	background-position 0 0, 5px 5px
-	bottom 0
-	left -200px
-	overflow-y auto
-	position fixed
-	top 0
-	transition left .2s ease
-	width 200px
-
-	.gl-link
-		display block
-		text-align left
-		transition background .3s ease, color .3s ease
-		width 100%
-
-		span
-			display block
-
-			&:before
-				background $gl-color-base-1
-				border solid 1px $gl-color-base-2
-				border-radius 50%
-				content ""
-				display inline-block
-				height 7px
-				margin 0 8px 0 0
-				vertical-aling middle
-				transition background .2s ease
-				width 7px
-
-		&.active
-
-			span
-
-				&:before
-					background $gl-color-success
-
-				&:hover
-
-					&:before
-						border-color $gl-color-base-1
 
 // #########################
 
