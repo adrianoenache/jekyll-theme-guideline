@@ -3,7 +3,6 @@ button.gl
 	$reset-button()
 	$gl-button-size = 30px
 	background $gl-bt-example-controls-bg
-	border $gl-border-config
 	color $gl-bt-example-controls-color
 	display inline-block
 	font-size 20px
@@ -15,6 +14,8 @@ button.gl
 	width $gl-button-size
 
 	span
+		border $gl-border-config
+		box-sizing border-box
 		display block
 		height 100%
 		width 100%
@@ -95,9 +96,6 @@ button.gl
 	right -1px
 	top -32px
 	z-index $z-index-content
-
-	button.gl
-		border 0
 
 .gl-example
 	background $gl-example-bg
