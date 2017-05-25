@@ -12,7 +12,7 @@
 <meta property="og:title" content="{% if page.ogTilte %}{{ page.ogTilte | escape }}{% else %}{{ site.data.head.ogTilte }}{% endif %}">
 <meta property="og:description" name="description" content="{% if page.ogDescription %}{{ page.ogDescription | escape }}{% else %}{{ site.data.head.ogDescription }}{% endif %}">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="{% if page.lang %}{{ page.lang | escape }}{% else %}{{ site.data.head.lang }}{% endif %}" />
+<meta property="og:locale" content="{% if page.lang %}{{ page.lang | escape }}{% else %}{{ site.data.head.lang | replace: '-', '_'}}{% endif %}" />
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:image" content="{{ site.url }}{% if page.ogImgSrc %}{{ page.ogImgSrc | escape }}{% else %}{{ site.data.head.ogImgSrc }}{% endif %}">
 <meta property="og:image:height" content="{% if page.ogImgHeigth %}{{ page.ogImgHeigth | escape }}{% else %}{{ site.data.head.ogImgHeigth }}{% endif %}"/>
