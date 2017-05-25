@@ -20,17 +20,9 @@ button.gl
 		height 100%
 		width 100%
 
-	&:hover
-		background $gl-bt-example-controls-hover-bg
-		color $gl-bt-example-controls-hover-color
-
 	&.gl-active
 		background $gl-bt-example-controls-hover-bg
 		color $gl-bt-example-controls-hover-color
-
-		&:hover
-			background $gl-bt-example-controls-bg
-			color $gl-bt-example-controls-color
 
 	&.gl-bt-more
 
@@ -71,9 +63,6 @@ button.gl
 		transition width .3s $ease-in-out
 		width 216px
 
-		&:hover
-			width 232px
-
 		.gl-wrapper-icon
 			height 2em
 			position absolute
@@ -102,20 +91,19 @@ button.gl
 				opacity 1
 
 .gl-wrapper-nav
-	background-color $gl-page-bg
-	background-image $gl-bg-stage
-	background-size 10px 10px
-	background-position 0 0, 5px 5px
+	background $gl-page-bg
+	box-shadow: 0 0 0 0 rgba($gl-shadow, .25);
 	height 100%
 	left -200px
 	position fixed
 	top 0
-	transition left .2s ease
+	transition left .3s $ease-in-out
 	width 200px
 	z-index $z-index-in-front
 
 	.gl-nav
 		height 100%
+		position relative
 		overflow-y auto
 
 :root
@@ -130,4 +118,35 @@ button.gl
 				width 200px
 
 		.gl-wrapper-nav
+			box-shadow: 1px 0 5px 0 rgba($gl-shadow, .25);
 			left 0
+
+			&:before
+				background rgba($gl-shadow, .01);
+				content ""
+				display block
+				height 100%
+				left 0
+				position fixed
+				top 0
+				width 100%
+				z-index $z-index-in-front -1
+
+@media (min-width: $desktop)
+
+	button.gl
+
+		&:hover
+			background $gl-bt-example-controls-hover-bg
+			color $gl-bt-example-controls-hover-color
+
+		&.gl-active
+
+			&:hover
+				background $gl-bt-example-controls-bg
+				color $gl-bt-example-controls-color
+
+		&.gl-main-bt
+
+			&:hover
+				width 232px
