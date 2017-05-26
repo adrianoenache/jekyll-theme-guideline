@@ -1,0 +1,94 @@
+// Grid example
+.gl-gs-example
+	font-size 0
+
+	.gl-gs-wrapper
+		margin 0 0 $gutters(1)
+		overflow hidden
+		white-space nowrap
+
+		&:last-child
+			margin 0
+
+	.gl-col
+		background $gl-gradient
+		box-sizing border-box
+		color $gl-color-base-1
+		display inline-block
+		font-size 10px
+		line-height 10px
+		margin 0 $gutters(1) 0 0
+		padding $gutters(.5)
+
+	.gl-column
+		margin 0 $gutters(1) 0 0
+		width $column
+
+		&:before
+			content "" + $column
+
+	.gl-viewport-smart
+		width $smart //$columns(5)
+
+		&:before
+			content ">>> @media min-width = " + $smart + " - smartphone"
+
+	.gl-viewport-smart-to-tablet
+		width $smart-to-tablet //$columns(10)
+
+		&:before
+			content "<<< @media max-width = " + $smart-to-tablet + " - smartphone"
+
+	.gl-viewport-tablet
+		width $tablet //$columns(10)
+
+		&:before
+			content ">>> @media min-width = " + $tablet + " - tablet"
+
+.gl-viewport-tablet-to-notebook
+		width $tablet-to-notebook //$columns(15)
+
+		&:before
+			content "<<< @media max-width = " + $tablet-to-notebook + " - tablet"
+
+.gl-viewport-notebook
+		width $notebook //$columns(15)
+
+		&:before
+			content ">>> @media min-width = " + $notebook + " - notebook"
+
+	.gl-viewport-notebook-to-desktop
+		width $notebook-to-desktop //$columns(20)
+
+		&:before
+			content "<<< @media max-width = " + $notebook-to-desktop + " - notebook"
+
+	.gl-viewport-desktop
+		width $desktop //$columns(20)
+
+		&:before
+			content ">>> @media min-width = " + $desktop + " - desktop"
+
+	.gl-viewport-desktop-to-desktop-large
+		width $desktop-to-desktop-large //$columns(25)
+
+		&:before
+			content "<<< @media max-width = " + $desktop-to-desktop-large + " - desktop"
+
+	.gl-viewport-desktop-large
+		width $desktop-large //$columns(25)
+
+		&:before
+			content ">>> @media min-width = " + $desktop-large + " - desktop large"
+
+	.gl-viewport-desktop-large-to-full-hd
+		width $desktop-large-to-full-hd //$columns(30)
+
+		&:before
+			content "<<< @media max-width = " + $desktop-large-to-full-hd + " - desktop large"
+
+	.gl-viewport-full-hd
+		width $full-hd //$columns(30)
+
+		&:before
+			content ">>> @media min-width = " + $full-hd + " - full hd"

@@ -1,0 +1,68 @@
+//
+$gutter = 14px
+$column = 50px
+//
+$columns($qtd-column, mod = null)
+	if mod == 'fluid'
+		box-sizing border-box
+		display inline-block
+		max-width ($column + $gutter) * $qtd-column
+		width: 100%
+	else if mod == 'static'
+		box-sizing border-box
+		display inline-block
+		width: ($column + $gutter) * $qtd-column
+	else
+		$size = ($column + $gutter) * $qtd-column
+//
+$columns-p($qtd-column, mod = null)
+	if mod == 'fluid'
+		box-sizing border-box
+		display inline-block
+		max-width (100% / $qtd-column)
+		width 100%
+	else if mod == 'static'
+		box-sizing border-box
+		display inline-block
+		width (100% / $qtd-column)
+	else
+		$size = (100% / $qtd-column)
+//
+$gutters($qtd-gutter)
+	$size = $gutter * $qtd-gutter
+//
+$smart-size = $columns(5)
+$tablet-size = $columns(10)
+$notebook-size = $columns(15)
+$desktop-size = $columns(20)
+$desktop-large-size = $columns(25)
+$full-hd-size = $columns(30)
+//
+$smart = $smart-size
+$smart-to-tablet = $tablet-size - 1px
+$tablet = $tablet-size
+$tablet-to-notebook = $notebook-size - 1px
+$notebook = $notebook-size
+$notebook-to-desktop = $desktop-size - 1px
+$desktop = $desktop-size
+$desktop-to-desktop-large = $desktop-large-size - 1px
+$desktop-large = $desktop-large-size
+$desktop-large-to-full-hd = $full-hd-size - 1px
+$full-hd = $full-hd-size
+//
+// @media (min-width: $smart)
+// @media (max-width: $smart-to-tablet)
+// @media (max-width: $smart-to-tablet) and (min-width: $smart)
+// @media (min-width: $tablet)
+// @media (max-width: $tablet-to-notebook)
+// @media (max-width: $tablet-to-notebook) and (min-width: $tablet)
+// @media (min-width: $notebook)
+// @media (max-width: $notebook-to-desktop)
+// @media (max-width: $notebook-to-desktop) and (min-width: $notebook)
+// @media (min-width: $desktop)
+// @media (min-width: $desktop-to-desktop-large)
+// @media (min-width: $desktop-to-desktop-large) and (min-width: $desktop)
+// @media (min-width: $desktop-large)
+// @media (min-width: $desktop-large-to-full-hd)
+// @media (min-width: $desktop-large-to-full-hd) and (min-width: $desktop-large)
+// @media (min-width: $full-hd)

@@ -1,1 +1,64 @@
-// 
+// Mockup link
+
+.gl-mockup-more
+	background $gl-color-base-2
+	border $gl-border-config
+	color $gl-color-base-1
+	cursor pointer
+	display inline-block
+	font-size 1rem
+	left -20px
+	line-height 10px
+	margin 0
+	padding 0
+	position absolute
+	text-align center
+	transition background .3s ease
+	top 0
+	width 10px
+
+	&:before
+		content "+"
+
+.gl-wrapper-mockup-links
+	font-size 0
+	list-style none
+	padding 0 0 0 20px
+
+	li
+		margin: 0 0 1rem
+		position: relative
+
+		.gl-mockup-more-controler
+			display none
+
+			&:checked ~ .gl-mockup-more
+				background $gl-color-base-1
+				color $gl-color-base-2
+				transition background .3s ease
+
+				&:before
+					content "-"
+
+			&:checked ~ .gl-wrapper-mockup-links
+				display block
+
+		.gl-wrapper-mockup-links
+			display none
+			margin $gutters(.5) 0
+			padding 0 0 0 $gutters(1)
+
+			li
+				margin 0
+
+		.gl-mockup-links
+			color $gl-color-base-2
+			font-size 1rem
+			line-height $gutters(1)
+			text-decoration none
+
+			&:hover
+				text-decoration underline
+
+			&[href="#"], &[href=""]
+				color $gl-error
